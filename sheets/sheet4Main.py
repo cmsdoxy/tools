@@ -22,7 +22,7 @@ def isInLPC(institute):
     return False
 
 
-print "Generating sheet4...",
+print "Generating sheet4..."
 
 json_file = open('data/sheet1.json', 'r')
 analysies_json = json.load(json_file)

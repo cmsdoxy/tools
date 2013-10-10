@@ -1,3 +1,4 @@
+# coding: utf-8
 '''
 Created on Sep 19, 2013
 
@@ -5,12 +6,12 @@ Created on Sep 19, 2013
 @email mantas.stankevicius@cern.ch
 '''
 
+
 from Note import Note
 from Author import Author
 
 from BeautifulSoup import BeautifulSoup
-import re
-import json
+import re, json
 
 delim = " | "
 
@@ -45,7 +46,6 @@ def note_info(html):
     note_soup = BeautifulSoup(html)
     code = note_soup.find("a").renderContents()
     code=code.strip()
-#    return "CMS AN-" + code + " |" + getSubmitterInfo(code)
     return Note("CMS AN-" + code, getSubmitterInfo(code))
 
 def getSubmitterInfo(code):
@@ -53,11 +53,12 @@ def getSubmitterInfo(code):
         tds = tr.findAll("td")
         if tds[0].renderContents() == "CMS AN-"+code:
                 # Submitter | Country | Institute 
+            print tds[5].renderContents().split("(")[0].strip()
             return Author(tds[5].renderContents().split("(")[0].strip(), tds[3].renderContents().strip(), tds[4].renderContents().strip()) 
         
 def appendAuthor(target, author):
     if (author != None):
-        target.append(author.fullname)
+        target.append(author.fullname.decode("utf-8"))
         target.append(author.institute)
         target.append(author.country)
     else:
@@ -76,12 +77,12 @@ def appendNote(target, note):
     return target
 
 
-print "Generating sheet1...",
+print "Generating sheet1..."
 
 json_file = open('country_institute.json', 'r')
 country_institute_json = json.load(json_file)        
         
-f = open("data/annotes.html", "r");
+f = open("data/annotes.html", "rb");
 annotesHTML = f.read()
 annotes_soup = BeautifulSoup(annotesHTML)
 annotes = annotes_soup.findAll("tr",{ "class" : re.compile(r"^(odd|even)$") })
@@ -229,8 +230,11 @@ for tr in trs:
         output_line.append(len(notes).__str__())                            # number of notes
         output_line.append(notes_usa.__str__())                             # number of notes where submitter is from USA
         
-        print " | ".join(output_line)
-        out.write(" | ".join(output_line) + "\n")
+#        print output_line
+        out.write(" | ".join([s.encode('utf-8') for s in output_line]))
+        
+
+        out.write("\n")
         
         #JSON object
         
@@ -286,7 +290,7 @@ for tr in trs:
 
 #print json.dumps(JSON_DATA,indent=5)
 
-json_o = open("data/sheet1.json", "w")
+json_o = open("data/sheet1.json", "wb")
 json_o.write(json.dumps(JSON_DATA,indent=5))
 json_o.close()
         

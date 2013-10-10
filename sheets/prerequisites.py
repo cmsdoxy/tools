@@ -69,13 +69,13 @@ def fetchAnalysies():
     f.write(data)
     f.close()
     
-    print "Done"
+    print "Fetched"
     
     # creating analysies folder where all fetched analysies will be stored
     if not os.path.exists("data/analysies"):
         os.makedirs("data/analysies")
     
-    print "Downloading analysies... ",
+    print "Downloading analysies... "
     
     soup = BeautifulSoup(data)
     trs = soup.findAll("tr",{ "class" : re.compile(r"^(odd|even)$") })
@@ -94,11 +94,11 @@ def fetchAnalysies():
             o.write(analysisHTML)
             o.close()
             
-    print "Done"
+    print "Dowloaded"
     
 def fetchANotes():
     data = handle.getPage('http://cms.cern.ch/iCMS/user/annotes')
-    f = open("data/annotes.html", "w")
+    f = open("data/annotes.html", "wb")
     f.write(data)
     f.close()
 
