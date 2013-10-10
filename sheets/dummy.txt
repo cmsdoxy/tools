@@ -1,3 +1,0 @@
-<tr>sudas</tr>
-<tr>Wöhri Hermine Katharina</tr>
-<tr>W\xc3\xb6hri Hermine Katharina</tr>
