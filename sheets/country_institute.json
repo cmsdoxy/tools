@@ -1,0 +1,278 @@
+{
+    "Armenia": [
+        "YEREVAN"
+    ],
+    "Austria": [
+        "HEPHY"
+    ],
+    "Belarus": [
+        "MINSK-INP",
+        "MINSK-NCPHEP",
+        "MINSK-RIAPP",
+        "MINSK-UNIV"
+    ],
+    "Belgium": [
+        "ANTWERPEN",
+        "BRUSSEL-VUB",
+        "BRUXELLES-ULB",
+        "GHENT",
+        "LOUVAIN",
+        "MONS"
+    ],
+    "Brazil": [
+        "RIO-CBPF",
+        "RIO-UERJ",
+        "SAO_PAULO"
+    ],
+    "Bulgaria": [
+        "SOFIA-INRNE",
+        "SOFIA-ISER",
+        "SOFIA-UNIV"
+    ],
+    "China": [
+        "BEIJING-IHEP",
+        "HEFEI-USTC",
+        "PEKING-UNIV",
+        "SHANGHAI-IC"
+    ],
+    "Colombia": [
+        "UNIANDES"
+    ],
+    "Croatia": [
+        "SPLIT-FESB",
+        "SPLIT-UNIV",
+        "ZAGREB-RUDJER"
+    ],
+    "Cyprus": [
+        "NICOSIA-UNIV"
+    ],
+    "CzechRepublic": [
+        "CHARLES-UNIV"
+    ],
+    "Egypt": [
+        "ASRT-ENHEP"
+    ],
+    "Estonia": [
+        "TALLINN"
+    ],
+    "Finland": [
+        "HELSINKI-HIP",
+        "HELSINKI-UNIV",
+        "LAPPEENRANTA-LUT"
+    ],
+    "France": [
+        "LAPP",
+        "LYON",
+        "LYON_CC",
+        "POLYTECHNIQUE",
+        "SACLAY",
+        "STRASBOURG"
+    ],
+    "Georgia": [
+        "TBILISI-IHEPI",
+        "TBILISI-IPAS"
+    ],
+    "Germany": [
+        "AACHEN-1",
+        "AACHEN-3A",
+        "AACHEN-3B",
+        "DESY",
+        "HAMBURG-UNIV",
+        "KARLSRUHE-IEKP"
+    ],
+    "Greece": [
+        "ATHENS",
+        "DEMOKRITOS",
+        "IOANNINA"
+    ],
+    "Hungary": [
+        "ATOMKI",
+        "BUDAPEST",
+        "DEBRECEN-IEP"
+    ],
+    "India": [
+        "CHANDIGARH",
+        "DELHI-UNIV",
+        "KOLKATA-SAHA",
+        "MUMBAI-BARC",
+        "NISER",
+        "TIFR-EHEP",
+        "TIFR-HECR"
+    ],
+    "Iran": [
+        "IPM"
+    ],
+    "Ireland": [
+        "DUBLIN-UCD"
+    ],
+    "Italy": [
+        "BARI",
+        "BOLOGNA",
+        "CATANIA",
+        "FIRENZE",
+        "FRASCATI",
+        "GENOVA",
+        "MILANO-BICOCCA",
+        "NAPOLI",
+        "PADOVA",
+        "PAVIA",
+        "PERUGIA",
+        "PISA",
+        "ROMA-1",
+        "TORINO",
+        "TRIESTE"
+    ],
+    "Korea": [
+        "CHEJU",
+        "CHONBUK",
+        "CHONNAM",
+        "DONGSHIN",
+        "KANGWON",
+        "KONKUK-UNIV",
+        "KOREA-UNIV",
+        "KYUNGPOOK",
+        "SEONAM",
+        "SEOUL-EDU",
+        "SEOUL-SNU",
+        "SEOUL-UNIV",
+        "SKK-UNIV",
+        "WONKWANG"
+    ],
+    "Lithuania": [
+        "VILNIUS-ACADEMY",
+        "VILNIUS-UNIV"
+    ],
+    "Mexico": [
+        "MEXICO-CINVESTAV",
+        "MEXICO-IBEROAM",
+        "MEXICO-PUEBLA",
+        "MEXICO-UASLP"
+    ],
+    "Netherlands": [
+        "EINDHOVEN"
+    ],
+    "NewZealand": [
+        "AUCKLAND",
+        "CANTERBURY"
+    ],
+    "Pakistan": [
+        "ISLAMABAD-NCP",
+        "NUST"
+    ],
+    "Poland": [
+        "WARSAW-IEP",
+        "WARSAW-INS",
+        "WARSAW-ISE"
+    ],
+    "Portugal": [
+        "LIP"
+    ],
+    "Russia": [
+        "DUBNA",
+        "MOSCOW-INR",
+        "MOSCOW-ITEP",
+        "MOSCOW-LEBEDEV",
+        "MOSCOW-MSU",
+        "MOSCOW-RDIPE",
+        "MYASISHCHEV",
+        "PROTVINO",
+        "RIE",
+        "ST-PETERSBURG"
+    ],
+    "Serbia": [
+        "VINCA"
+    ],
+    "Spain": [
+        "MADRID-CIEMAT",
+        "MADRID-UNIV",
+        "OVIEDO",
+        "SANTANDER",
+        "Zaragoza-ITA"
+    ],
+    "Switzerland": [
+        "CERN",
+        "PSI",
+        "ZURICH-ETH",
+        "ZURICH-UNIV"
+    ],
+    "Taiwan": [
+        "CHUNGLI-NCU",
+        "TAIPEI-NTU"
+    ],
+    "Thailand": [
+        "BANGKOK"
+    ],
+    "Turkey": [
+        "ADANA-CUKUROVA",
+        "ANKARA-METU",
+        "BOGAZICI",
+        "ISTANBUL-TECH"
+    ],
+    "USA": [
+        "ALABAMA-UNIV",
+        "BAYLOR-UNIV",
+        "BOSTON-UNIV",
+        "BROWN-UNIV",
+        "CALTECH",
+        "CARNEGIE-MELLON",
+        "CHICAGO",
+        "COLORADO",
+        "CORNELL",
+        "FAIRFIELD",
+        "FERMILAB",
+        "FLORIDA-FIU",
+        "FLORIDA-STATE",
+        "FLORIDA-TECH",
+        "FLORIDA-UNIV",
+        "IOWA",
+        "JOHNS-HOPKINS",
+        "KANSAS-STATE",
+        "KANSAS-UNIV",
+        "LIVERMORE",
+        "MARYLAND",
+        "MINNESOTA",
+        "MISSISSIPPI",
+        "MIT",
+        "NEBRASKA",
+        "NORTHEASTERN",
+        "NORTHWESTERN",
+        "NOTRE_DAME",
+        "OHIO-STATE",
+        "PRINCETON",
+        "PUERTO_RICO",
+        "PURDUE",
+        "PURDUE-CALUMET",
+        "RICE",
+        "ROCHESTER",
+        "ROCKEFELLER",
+        "RUTGERS",
+        "SUNY-BUFFALO",
+        "TENNESSEE",
+        "TEXAS-TAMU",
+        "TEXAS-TECH",
+        "UCDAVIS",
+        "UCLA",
+        "UCRIVERSIDE",
+        "UCSB",
+        "UCSD",
+        "VANDERBILT",
+        "VIRGINIA-UNIV",
+        "WAYNE",
+        "WISCONSIN"
+    ],
+    "Ukraine": [
+        "KHARKOV-ISC",
+        "KHARKOV-KIPT",
+        "KHARKOV-KSU"
+    ],
+    "UnitedKingdom": [
+        "BRISTOL",
+        "BRUNEL",
+        "CCCS-UWE",
+        "LONDON-IC",
+        "RAL"
+    ],
+    "Uzbekistan": [
+        "TASHKENT"
+    ]
+}
