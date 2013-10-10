@@ -104,7 +104,7 @@ def fetchANotes():
 
 handle = None
 
-print "Checking for prerequisites"
+print "Checking for prerequisites..."
 
 if not os.path.exists("data"):
     os.makedirs("data")
@@ -121,6 +121,6 @@ if not os.path.isfile("data/annotes.html"):
         handle = Login()
     fetchANotes()
 
-print "Now you can generate sheets"
+print "Checking finished"
 
 # ----------------- TEST ----------------- #

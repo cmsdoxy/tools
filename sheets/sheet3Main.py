@@ -10,11 +10,14 @@ import json
 analysies_json = ""
 annotes_json = ""
 output = ""
-with open('data/sheet1.json', 'r') as json_file:
-    analysies_json = json.load(json_file)
+
+print "Generating sheet3...",
+
+json_file = open('data/sheet1.json', 'r')
+analysies_json = json.load(json_file)
     
-with open('data/sheet2.json', 'r') as json_file:
-    annotes_json = json.load(json_file)
+json_file = open('data/sheet2.json', 'r')
+annotes_json = json.load(json_file)
     
 analysis_codes = analysies_json.keys()
 analysis_codes.sort()
@@ -60,3 +63,5 @@ header = " Analysis code | AN Notes | # Authors | # Authors from USA | Institute
 f = open("sheets/sheet3.csv","w")
 f.write(header+output)
 f.close()
+
+print "Done"

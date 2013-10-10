@@ -9,22 +9,26 @@ import json
 
 LPC = ["BAYLOR-UNIV", "BOSTON-UNIV", "BROWN-UNIV", "CALTECH", "CARNEGIE-MELLON", "CHICAGO", "COLORADO", "CORNELL", "FERMILAB", "FLORIDA-FIU", "FLORIDA-STATE", "FLORIDA-TECH", "FLORIDA-UNIV", "IOWA", "KANSAS-STATE", "KANSAS-UNIV", "LIVERMORE", "MINNESOTA", "MISSISSIPPI", "NEBRASKA", "NORTHWESTERN", "NOTRE_DAME", "PRINCETON", "PUERTO_RICO", "PURDUE", "PURDUE-CALUMET", "ROCKEFELLER", "RUTGERS", "SUNY-BUFFALO", "TENNESSEE", "TEXAS-TAMU", "TEXAS-TECH", "VIRGINIA-UNIV"]
 
+analysies_json = ""
+annotes_json = ""
+output = ""
+total = ""
+
+
 def isInLPC(institute):
     for s in LPC:
         if institute == s:
             return True
     return False
 
-analysies_json = ""
-annotes_json = ""
-output = ""
-total = ""
 
-with open('data/sheet1.json', 'r') as json_file:
-    analysies_json = json.load(json_file)
+print "Generating sheet4...",
+
+json_file = open('data/sheet1.json', 'r')
+analysies_json = json.load(json_file)
     
-with open('data/sheet2.json', 'r') as json_file:
-    annotes_json = json.load(json_file)
+json_file = open('data/sheet2.json', 'r')
+annotes_json = json.load(json_file)
     
 
 analysis_codes = analysies_json.keys()
@@ -242,3 +246,5 @@ f = open("sheets/sheet4.csv","w")
 f.write(header+output+header+total)
 f.close()    
     
+
+print "Done"

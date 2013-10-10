@@ -75,8 +75,11 @@ def appendNote(target, note):
         target = appendAuthor(target, None)
     return target
 
-with open('country_institute.json', 'r') as json_file:
-    country_institute_json = json.load(json_file)        
+
+print "Generating sheet1...",
+
+json_file = open('country_institute.json', 'r')
+country_institute_json = json.load(json_file)        
         
 f = open("data/annotes.html", "r");
 annotesHTML = f.read()
@@ -100,7 +103,7 @@ for i in range(1, MAX_NUM_OF_NOTES+1):
     header += " | AN "+i.__str__()+" # | AN "+i.__str__()+" Submitter | AN "+i.__str__()+" Submitter Institute | AN "+i.__str__()+" Submitter Country"
     
 header += " | Total # of AN | Total # of AN Submitters from US"  
-print header 
+
 out.write(header+"\n")
 
 soup = BeautifulSoup(analysisListHTML)
@@ -288,3 +291,5 @@ json_o.write(json.dumps(JSON_DATA,indent=5))
 json_o.close()
         
 out.close()
+
+print "Done"
