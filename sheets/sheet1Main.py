@@ -52,8 +52,7 @@ def getSubmitterInfo(code):
     for tr in annotes:
         tds = tr.findAll("td")
         if tds[0].renderContents() == "CMS AN-"+code:
-                # Submitter | Country | Institute 
-            print tds[5].renderContents().split("(")[0].strip()
+                # Submitter | Country | Institute             
             return Author(tds[5].renderContents().split("(")[0].strip(), tds[3].renderContents().strip(), tds[4].renderContents().strip()) 
         
 def appendAuthor(target, author):
