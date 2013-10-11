@@ -1,11 +1,11 @@
 ##!/bin/bash
 
-python prerequisites.py
+python scripts/prerequisites.py
 
-python sheet1Main.py
+python scripts/sheet1Main.py
 
-python sheet2Main.py
+python scripts/sheet2Main.py
 
-python sheet3Main.py
+python scripts/sheet3Main.py
 
-python sheet4Main.py
+python scripts/sheet4Main.py
