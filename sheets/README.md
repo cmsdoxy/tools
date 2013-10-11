@@ -18,3 +18,6 @@ In case of error:
 
 2. try again `./generate_sheets.sh`
 
+3. if problem persists contact `mantas.stankevicius@cern.ch` until Nov 30 2013. After that contact `ali.mehmet.altundag@cern.ch`
+
+
