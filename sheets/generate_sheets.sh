@@ -1,7 +1,6 @@
 ##!/bin/bash
 
 python prerequisites.py
-cp sheet2.json data/
 
 python sheet1Main.py
 
