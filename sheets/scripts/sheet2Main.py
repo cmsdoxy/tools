@@ -49,7 +49,7 @@ def parseANotes():
                     cells[NauthIndex].text.encode('utf-8')])
     return CMSANNotes
 
-print "ANotes parsing for associating..."
+print "ANotes parsing for associating...",
 parsedANotes = parseANotes()
 print "Done"
 
@@ -265,8 +265,8 @@ def createCSV():
                      "InstCode", "Submitter", "Nauth", "NauthUSA", "Sum of Found",
                      "Sum of Match", "Sum of Not Match", ''])
 
-    length  = len(parsedANotes)
-    counter = 0
+#    length  = len(parsedANotes)
+#    counter = 0
 
     for i in parsedANotes:
         authors         = []
@@ -323,14 +323,14 @@ def createCSV():
                         authors_line.append("#not_found#")
         #print i[0]
         writer.writerow(["", i[0], i[1], i[2], i[3], i[4], i[5], i[6], str(NauthUSA), str(somofFound), str(sumofMatch), str(somofFound - sumofMatch) ] + authors_line + [""])
-        counter += 1
-        
-        if counter % (length/100) == 0:
-            print "#",
+#        counter += 1
+#        
+#        if counter % (length/100) == 0:
+#            print "#"
         
     csvfile.close()
 
 print "Associating..."
 createCSV()
-print "\nDone"
+print "Done"
 # ---------------------------------- #
