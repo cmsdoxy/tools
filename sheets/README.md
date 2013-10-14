@@ -8,6 +8,8 @@ Instructions how to generate CADI sheets:
 > chmod +x generate_sheets.sh && ./generate_sheets.sh
 ```
 
+You will be asked to enter your login and password, because CADI requires authentication in order to acces data.
+
 ...wait... take a break :)
 
 For the first time script will take about 30mins because it downloads a lot of data from CADI.
