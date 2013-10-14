@@ -204,9 +204,7 @@ def parseANotes():
                     cells[NauthIndex].text.encode('utf-8')])
     return CMSANNotes
 
-print "ANotes parsing for collecting analysis note details..."
 parsedANotes = parseANotes()
-print "Done"
 
 for i in parsedANotes:
     if not os.path.exists("data/detail_pages/%s.html" % i[0].replace('/', '_')):
