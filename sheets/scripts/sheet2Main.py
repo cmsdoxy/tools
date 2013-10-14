@@ -6,7 +6,7 @@ Created on Oct 10, 2013
 '''
 
 from BeautifulSoup import BeautifulSoup                                             
-import csv, os, re, copy
+import csv, os, re, copy, json
 
 countries = ["Armenia", "Austria", "Belarus", "Belgium",
              "Brazil", "Bulgaria", "China", "Colombia",
@@ -180,7 +180,7 @@ def blackList(str_):
         'London', 'Charlottesville', 'VA.', 'In', 'Geneva', 'Santa Barbara', 'NJ USA',
         'FL', 'Imperial College', 'Perugia', 'Gainesville', 'Florida', 'U.S.A.', 'Los Angeles',
         'CMG+INFN-MIB ', 'Indiana', 'Tallahasse', "Princeton", "Univ.", "University"]
-    if str_.capitalize() in l:
+    if str_ in l:
         return True
     else:
         return False
@@ -254,6 +254,7 @@ def match(parsed_name):
 
 def createCSV():
     csvfile         = open('sheets/sheet2.csv', 'wb')
+    json_data       = {}
     writer          = csv.writer(csvfile, delimiter='|', quotechar='|', quoting=csv.QUOTE_MINIMAL)
     writer.writerow(['', "CMSNoteID", "Title", "submitDate", "Country",
                      "InstCode", "Submitter", "Nauth", "NauthUSA", "Sum of Found",
@@ -317,12 +318,30 @@ def createCSV():
                         authors_line.append("#not_found#")
         #print i[0]
         writer.writerow(["", i[0], i[1], i[2], i[3], i[4], i[5], i[6], str(NauthUSA), str(somofFound), str(sumofMatch), str(somofFound - sumofMatch) ] + authors_line + [""])
+        
+        json_data[i[0]] = {
+            "title"     : i[1],
+            "date"      : i[2],
+            "country"   : i[3],
+            "institute" : i[4],
+            "fullname"  : i[5],
+            "nauth"     : i[6],
+            "nauth_usa" : NauthUSA
+        }
+        json_data[i[0]]["authors"] = {}
+        for j in range(len(authors_line)/3):
+            json_data[i[0]]["authors"][authors_line[j*3]] = {"institute" : authors_line[j*3 + 1], "country" : authors_line[j*3 + 2]}
+        
+
 #        counter += 1
 #        
 #        if counter % (length/100) == 0:
 #            print "#"
         
     csvfile.close()
+    json_file = open("data/sheet2.json", 'w')
+    json_file.write(json.dumps(json_data, indent = 1))
+    json_file.close()
 
 createCSV()
 print "Done"
