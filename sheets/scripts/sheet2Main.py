@@ -107,7 +107,6 @@ def parseMemberInfo(fileName):
     return data
 
 parsedMemberInfo = []
-print "Members information parsing..."
 for i in countries:
     #The USA has special situation, it has two pages and these pages have to be merge
     if i == "USA":
@@ -129,7 +128,6 @@ for i in USA2:
     if not ishas(USA1, i):
         USAMerged.append(i)
 parsedMemberInfo = parsedMemberInfo + USAMerged
-print "Done"
 
 def getNameFromFile(fileName):
     f = open("data/detail_pages/%s.html" % fileName.replace('/', '_'))
@@ -328,7 +326,6 @@ def createCSV():
         
     csvfile.close()
 
-print "Associating..."
 createCSV()
 print "Done"
 # ---------------------------------- #
