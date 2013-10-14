@@ -238,7 +238,7 @@ output_line.append(institutes_LPC_num_total.__str__())
 
 total = " | ".join(output_line) + "\n" 
     
-header = "Analysis code, Status, ARC chair from USA, ARC chair from LPC, Cadi contact from US, Cadi contact LPC, # of ARC members, # of ARC members form USA, # of ARC members from LPC, # of an submitters, # of submitters from USA, # of AN submitters from LPC, # AN authors, # of AN authors from USA, # of  AN authors from LPC, # of institutes, # in institutes from USA, # of institutes from LPC\n"
+header = "Analysis code | Status | ARC chair from USA | ARC chair from LPC | Cadi contact from US | Cadi contact LPC | # of ARC members | # of ARC members form USA | # of ARC members from LPC | # of an submitters | # of submitters from USA | # of AN submitters from LPC | # AN authors | # of AN authors from USA | # of  AN authors from LPC | # of institutes | # in institutes from USA | # of institutes from LPC\n"
     
 f = open("sheets/sheet4.csv","w")
 f.write(header+output+header+total)
