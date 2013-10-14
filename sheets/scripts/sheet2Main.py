@@ -49,7 +49,7 @@ def parseANotes():
                     cells[NauthIndex].text.encode('utf-8')])
     return CMSANNotes
 
-print "ANotes parsing for associating...",
+print "ANotes parsing for associating..."
 parsedANotes = parseANotes()
 print "Done"
 
@@ -113,7 +113,6 @@ for i in countries:
     if i == "USA":
         continue
     parsedMemberInfo = parsedMemberInfo + parseMemberInfo("data/authors/%s.html" % i)
-    print ">", i, "parsed"
     
 # Merge USA pages
 USA1   = parseMemberInfo("data/authors/USA.html")
@@ -130,7 +129,6 @@ for i in USA2:
     if not ishas(USA1, i):
         USAMerged.append(i)
 parsedMemberInfo = parsedMemberInfo + USAMerged
-print "> USA parsed"
 print "Done"
 
 def getNameFromFile(fileName):
