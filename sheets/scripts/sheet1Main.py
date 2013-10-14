@@ -78,7 +78,7 @@ def appendNote(target, note):
 
 print "Generating sheet1..."
 
-json_file = open('country_institute.json', 'r')
+json_file = open('scripts/country_institute.json', 'r')
 country_institute_json = json.load(json_file)        
         
 f = open("data/annotes.html", "rb");
