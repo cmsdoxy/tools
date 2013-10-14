@@ -11,8 +11,6 @@ analysies_json = ""
 annotes_json = ""
 output = ""
 
-print "Generating sheet3..."
-
 json_file = open('data/sheet1.json', 'r')
 analysies_json = json.load(json_file)
     
