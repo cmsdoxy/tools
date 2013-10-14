@@ -127,7 +127,6 @@ def fetchAuthors():
         f = open("data/authors/%s.html" % i, "w")
         f.write(data)
         f.close()
-        print i, "Ok!"
 
 def fetchDetailPage(anotes_id):
     global handle
@@ -139,7 +138,6 @@ def fetchDetailPage(anotes_id):
     f = open("data/detail_pages/%s.html" % anotes_id.replace('/', '_'), "w")
     f.write(data)
     f.close()
-    print "> %s saved" % anotes_id
         
 def authorsCheck():
     for i in countries:
@@ -206,7 +204,7 @@ def parseANotes():
                     cells[NauthIndex].text.encode('utf-8')])
     return CMSANNotes
 
-print "ANotes parsing for collecting analysis note details..." ,
+print "ANotes parsing for collecting analysis note details..."
 parsedANotes = parseANotes()
 print "Done"
 
