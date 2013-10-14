@@ -49,9 +49,7 @@ def parseANotes():
                     cells[NauthIndex].text.encode('utf-8')])
     return CMSANNotes
 
-print "ANotes parsing for associating..."
 parsedANotes = parseANotes()
-print "Done"
 
 def parseMemberInfo(fileName):
     f = open(fileName)
