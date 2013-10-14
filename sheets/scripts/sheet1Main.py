@@ -76,8 +76,6 @@ def appendNote(target, note):
     return target
 
 
-print "Generating sheet1..."
-
 json_file = open('scripts/country_institute.json', 'r')
 country_institute_json = json.load(json_file)        
         
