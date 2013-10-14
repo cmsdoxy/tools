@@ -12,6 +12,8 @@ You will be asked to enter your login and password, because CADI requires authen
 
 ...wait... take a break :)
 
+Generated sheets will be stored in **sheets** directory as csv files. Separator is pipe **|**
+
 For the first time script will take about 30mins because it downloads a lot of data from CADI.
 
 In case of error:
