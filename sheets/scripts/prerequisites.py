@@ -60,7 +60,7 @@ class Login:
 
 def fetchAnalysies():
     print "Fetching takes a while because CADI is slow. You have to wait about 10 mins. Time to take a break :)"
-    print "Fetching list of analysies...",
+    print "Fetching list of analysies..."
     
     data = handle.getPage('http://cms.cern.ch/iCMS/analysisadmin/analysismanagement?ALL=true')
     f = open("data/analysies.html", "w")
@@ -73,7 +73,7 @@ def fetchAnalysies():
     if not os.path.exists("data/analysies"):
         os.makedirs("data/analysies")
     
-    print "Downloading analysies... ",
+    print "Downloading analysies... "
     
     soup = BeautifulSoup(data)
     trs = soup.findAll("tr",{ "class" : re.compile(r"^(odd|even)$") })
