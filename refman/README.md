@@ -8,7 +8,7 @@ namespaces splitter
 
 classes splitter
 
-cinfig files splitter
+config files splitter
 
 package documentation splitter
 
