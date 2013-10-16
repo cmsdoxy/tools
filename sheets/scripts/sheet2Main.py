@@ -106,7 +106,7 @@ def parseMemberInfo(fileName):
 
 parsedMemberInfo = []
 for i in countries:
-    #The USA has special situation, it has two pages and these pages have to be merge
+    #The USA has special situation, it has two pages and these pages have to be merged
     if i == "USA":
         continue
     parsedMemberInfo = parsedMemberInfo + parseMemberInfo("data/authors/%s.html" % i)
@@ -332,7 +332,6 @@ def createCSV():
         for j in range(len(authors_line)/3):
             json_data[i[0]]["authors"][authors_line[j*3]] = {"institute" : authors_line[j*3 + 1], "country" : authors_line[j*3 + 2]}
         
-
 #        counter += 1
 #        
 #        if counter % (length/100) == 0:
