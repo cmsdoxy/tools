@@ -14,9 +14,9 @@ index page
 
 **other files required for doxyugen**
 
-config file
+(OK) config file
 
-header & footer
+(OK) header & footer
 
 templates ( if any )
 
