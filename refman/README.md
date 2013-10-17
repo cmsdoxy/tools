@@ -4,13 +4,13 @@ Ali, please add
 
 index page
 
-namespaces splitter
+(OK) namespaces splitter
 
-classes splitter
+(OK) classes splitter
 
-config files splitter
+(OK) config files splitter
 
-package documentation splitter
+(OK) package documentation splitter
 
 **other files required for doxyugen**
 
@@ -19,7 +19,5 @@ config file
 header & footer
 
 templates ( if any )
-
-did I forget anything?
 
 
