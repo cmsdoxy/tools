@@ -305,16 +305,26 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
 #                    else:
 #                        content += self.HTMLTreeAddItem(j)
 #                    continue
-                if self.data[domain][i][j].has_key("__DATA__"):
-                    content += self.HTMLTreeBegin(j, self.data[domain][i][j]["__DATA__"])
-                else:
-                    content += self.HTMLTreeBegin(j)
                 keysK = self.data[domain][i][j].keys()
                 keysK.sort()
+                length = len(keysK)
+
+                if length > 1:
+                    if self.data[domain][i][j].has_key("__DATA__"):
+                        content += self.HTMLTreeBegin(j, self.data[domain][i][j]["__DATA__"])
+                    else:
+                        content += self.HTMLTreeBegin(j)
+                else:
+                    if self.data[domain][i][j].has_key("__DATA__"):
+                        content += self.HTMLTreeAddItem(j, self.data[domain][i][j]["__DATA__"], empty = True)
+                    else:
+                        content += self.HTMLTreeAddItem(j, empty = True)
+
                 for k in keysK:
                     if k == '__DATA__': continue
                     if self.data[domain][i][j][k]["__DATA__"]: content += self.HTMLTreeAddItem(k, self.data[domain][i][j][k]["__DATA__"])
                     else: content += self.HTMLTreeAddItem(k)
+            if length > 1:
                 content += self.HTMLTreeEnd()
             content += self.HTMLTreeEnd()
         if self.tWikiLinks.has_key(domain):
@@ -335,14 +345,20 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
     def HTMLTreeEnd(self):
         return '</li></ul>\n\n'
     
-    def HTMLTreeAddItem(self, title, links = None, endNode = False):
+    def HTMLTreeAddItem(self, title, links = None, endNode = False, empty = False):
         if endNode: html = '\t<li class="last">'
         else: html = '\t<li>'
         
         if type(links) == str or type(links) == type(u''):
-            html = html + '\t<a href="%s" target="_blank" class=""><span class="file">%s</span></a>\n' % (links, title)
+            if empty:
+                html = html + '\t<a href="%s" target="_blank" class=""><span class="emptyFolder">%s</span></a>\n' % (links, title)
+            else:
+                html = html + '\t<a href="%s" target="_blank" class=""><span class="file">%s</span></a>\n' % (links, title)
         elif type(links) == dict:
-            html = html + '<span class="file">%s' % title
+            if empty:
+                html = html + '<span class="emptyFolder">%s ' % title
+            else:
+                html = html + '<span class="file">%s ' % title
             for i in links.keys():
                 html = html + '<a target="_blank" href="%s">[%s]</a> \n' % (links[i], i)
             html = html + '</span>'
