@@ -141,7 +141,7 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
             return None
         
     def __GetHTMLItemDepth(self, item):
-        return item["id"].count("_") - 2
+        return item["id"].count("_") - 1 # 1 for doxygen 1.8.5, 2 for old ver.
     
     def __HTMLFileName(self, fileName):
         return fileName.lower().replace(' ', '_')
