@@ -204,11 +204,16 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
                 flag = True
             if self.__GetHTMLItemDepth(i) == 3 and i.text != u'interface':
                 flag = False
+                
+#            print i.text, self.__GetHTMLItemDepth(i)
+#            raw_input()
             
             if flag and i.text != u'interface':
                 self.classes[level1][level2][i.text] = i.a["href"]
                 #self.ZEG = i
         print "Class hierarchy loaded(%d)..." % len(self.classes)
+        
+#        self.WriteFile("dbg.json", json.dumps(self.classes, indent = 1))
         
         # for parsing classes links from classes.html
         soup        = BeautifulSoup(self.classesSource)
@@ -307,7 +312,7 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
                 keysK = self.data[domain][i][j].keys()
                 keysK.sort()
                 length = len(keysK)
-
+#                content += "<!-- Begin -->"
                 if length > 1:
                     if self.data[domain][i][j].has_key("__DATA__"):
                         content += self.HTMLTreeBegin(j, self.data[domain][i][j]["__DATA__"])
@@ -318,13 +323,14 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
                         content += self.HTMLTreeAddItem(j, self.data[domain][i][j]["__DATA__"], folder = True)
                     else:
                         content += self.HTMLTreeAddItem(j, folder = True)
-
+                
                 for k in keysK:
                     if k == '__DATA__': continue
                     if self.data[domain][i][j][k]["__DATA__"]: content += self.HTMLTreeAddItem(k, self.data[domain][i][j][k]["__DATA__"])
                     else: content += self.HTMLTreeAddItem(k)
-            if length > 1:
-                content += self.HTMLTreeEnd()
+                if length > 1:
+                    content += self.HTMLTreeEnd()
+#                content += "<!-- End -->"
             content += self.HTMLTreeEnd()
         if self.tWikiLinks.has_key(domain):
             self.WriteFile("iframes/%s.html" % domain.lower().replace(' ', '_'), self.treePageTamplate % (domain, self.tWikiLinks[domain], content))
