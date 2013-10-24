@@ -133,7 +133,7 @@ for tr in trs:
         date = tds[2].renderContents()
         
         #STATUS
-        status = tds[6].find("span").renderContents()
+        #status = tds[6].renderContents()
         
         #ARC_MEMBERS
         arc_members_raw = tds[7].renderContents().strip()
@@ -162,6 +162,10 @@ for tr in trs:
             #Analysis CODE
             if (atds[0].renderContents().strip() == "Code:"):
                 analysis_code = atds[1].renderContents()
+
+	    #Status
+            if (atds[0].renderContents().strip() == "Status:"):
+                status = atds[1].renderContents().replace("&nbsp;", " ")
             
             #CADI CONTACT
             if (atds[0].renderContents().strip() == "Contact:"):
