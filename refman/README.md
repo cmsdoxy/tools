@@ -1,4 +1,3 @@
-
 ----------------
 
 **This is how "Instructions how to build Reference Manual" should look like**
@@ -21,7 +20,7 @@
 
 **common** directory must be placed in `vocms12:/data/doxygen/common`
 
-
+-----------------
 
 **TODO:**
 
