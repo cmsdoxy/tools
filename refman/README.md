@@ -19,6 +19,10 @@
 
 -----------------
 
+**common** directory must be placed in `vocms12:/data/doxygen/common`
+
+
+
 **TODO:**
 
 checkout CMSSW_7_0_0_pre6 source 
