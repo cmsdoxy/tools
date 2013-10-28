@@ -31,3 +31,5 @@ echo
 time python $SCRIPTS/PackageSplitter/run.py $DOC/html/ pages.html packageDocumentation_
 
 cp $SCRIPTS/MainPageGenerator/ReferenceManual.html $DOC/html/
+
+find $DOC/html/ -name "*.html" ! \( -name "*dir_*" -o -name "*globals_*" -o -name "*namespacemembers_*" -o -name "*functions_*" \) -print | sed -e 's|'$CMSSW_BASE'|'$VER'|g' | sort > $CMSSW_BASE/$VER.index
