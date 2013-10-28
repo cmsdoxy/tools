@@ -29,3 +29,5 @@ echo
 time python $SCRIPTS/ClassNamespaceSplitter/run.py $DOC/html/ namespaces.html namespacesList_
 echo
 time python $SCRIPTS/PackageSplitter/run.py $DOC/html/ pages.html packageDocumentation_
+
+cp $SCRIPTS/MainPageGenerator/ReferenceManual.html $DOC/html/
