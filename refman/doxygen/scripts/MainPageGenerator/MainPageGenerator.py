@@ -9,7 +9,7 @@ class MainPageGenerator:
 
         self.managersURL        = 'http://mantydze.web.cern.ch/mantydze/tcproxy.php?type=managers'
         self.usersURL           = 'http://mantydze.web.cern.ch/mantydze/tcproxy.php?type=users'
-        self.CMSSWURL           = 'http://mantydze.web.cern.ch/mantydze/tcproxy.php?type=packages&release=CMSSW_4_4_2'
+        self.CMSSWURL           = 'http://mantydze.web.cern.ch/mantydze/tcproxy.php?type=packages&release=CMSSW_6_2_0'
         
         self.tWikiLinks         = {'Analysis':'https://twiki.cern.ch/twiki/bin/view/CMS/SWGuideCrab',
                                    'Calibration and Alignment':'https://twiki.cern.ch/twiki/bin/view/CMS/SWGuideCalAli',
