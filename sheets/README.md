@@ -4,15 +4,12 @@ Instructions how to generate CADI sheets:
 > git clone git@github.com:cmsdoxy/tools.git
 
 > cd tools/sheets
-
 ```
-
-in case you have updated **usa_lpc_authors.csv** - replace existing one in **data** directory
-
+Follow [1] instruction if you have updated list of USA LPC authors 
 ```
-
 > chmod +x generate_sheets.sh && ./generate_sheets.sh
 ```
+
 
 You will be asked to enter your login and password, because CADI requires authentication in order to acces data.
 
@@ -26,8 +23,26 @@ In case of error:
 
 1. launch `chmod +x cleanup.sh && ./cleanup.sh`
 
-1. try again `./generate_sheets.sh`
+2. try again `./generate_sheets.sh`
 
-2. if problem persists contact `mantas.stankevicius@cern.ch` until Nov 30 2013. After this date contact `ali.mehmet.altundag@cern.ch`
+3. if problem persists contact `mantas.stankevicius@cern.ch` until Nov 30 2013. After this date contact `ali.mehmet.altundag@cern.ch`
 
+
+---
+
+**[1] Instuction**
+
+1.Convert updated_list_of_authors.xls(x) to **usa_lpc_authors.csv**
+
+**IMPORTANT!**
+
+Do not mistype filename **usa_lpc_authors.csv**
+
+Field delimiter - **|**
+
+Text delimiter - None (leave empty field)
+
+2.Replace existing **usa_lpc_authors.csv** with new one in **data** directory.
+
+---
 
