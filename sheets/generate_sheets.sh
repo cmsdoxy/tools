@@ -13,3 +13,6 @@ python scripts/sheet3Main.py
 
 echo "Generating Sheet4"
 python scripts/sheet4Main.py
+
+echo "Generating Sheet5"
+python scripts/sheet5Main.py
