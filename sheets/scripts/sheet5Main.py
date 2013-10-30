@@ -203,7 +203,6 @@ for analysis_code in analysis_codes:
                 # checking if authors belongs to LPC (in new list provided by Sudhir)
                 if usa_lpc_authors.has_key(author_key) and usa_lpc_authors[author_key]:
                     authors_num_from_LPC_N += 1
-                    print author_key
         
     output_line = []
     output_line.append(analysis_code)
