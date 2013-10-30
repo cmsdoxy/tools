@@ -5,6 +5,12 @@ Instructions how to generate CADI sheets:
 
 > cd tools/sheets
 
+```
+
+in case you have updated **usa_lpc_authors.csv** - replace existing one in **data** directory
+
+```
+
 > chmod +x generate_sheets.sh && ./generate_sheets.sh
 ```
 
@@ -18,10 +24,10 @@ For the first time script will take about 30mins because it downloads a lot of d
 
 In case of error:
 
-1. delete **data** and **sheets** directories `rm -R data sheets`
+1. launch `chmod +x cleanup.sh && ./cleanup.sh`
 
-2. try again `./generate_sheets.sh`
+1. try again `./generate_sheets.sh`
 
-3. if problem persists contact `mantas.stankevicius@cern.ch` until Nov 30 2013. After this date contact `ali.mehmet.altundag@cern.ch`
+2. if problem persists contact `mantas.stankevicius@cern.ch` until Nov 30 2013. After this date contact `ali.mehmet.altundag@cern.ch`
 
 
