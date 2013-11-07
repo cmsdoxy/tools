@@ -1,4 +1,4 @@
-import json, urllib2, os
+import json, urllib2, os, sys
 from BeautifulSoup import *
 
 class MainPageGenerator:
@@ -9,7 +9,7 @@ class MainPageGenerator:
 
         self.managersURL        = 'http://mantydze.web.cern.ch/mantydze/tcproxy.php?type=managers'
         self.usersURL           = 'http://mantydze.web.cern.ch/mantydze/tcproxy.php?type=users'
-        self.CMSSWURL           = 'http://mantydze.web.cern.ch/mantydze/tcproxy.php?type=packages&release=CMSSW_6_2_0'
+        self.CMSSWURL           = 'http://mantydze.web.cern.ch/mantydze/tcproxy.php?type=packages&release=CMSSW_4_4_2'
         
         self.tWikiLinks         = {'Analysis':'https://twiki.cern.ch/twiki/bin/view/CMS/SWGuideCrab',
                                    'Calibration and Alignment':'https://twiki.cern.ch/twiki/bin/view/CMS/SWGuideCalAli',
@@ -372,4 +372,15 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
         else:
             html = html + '\t<span class="file">%s</span>\n' % title
         return html + '\t</li>\n'
-        
+        if len(sys.argv) == 4:
+    PATH = sys.argv[1]
+    OUTF = sys.argv[2]
+    VER  = sys.argv[3]
+      
+    os.system("cp -rf %s/iframes/ %s" % (os.path.split(__file__)[0], PATH))
+    
+    l = MainPageGenerator(PATH, cmsVer = VER)
+    
+    l.CreateNewMainPage(OUTF)
+else:
+    print "parameter error. It must be like this: run.py /doc/html/ output.html"

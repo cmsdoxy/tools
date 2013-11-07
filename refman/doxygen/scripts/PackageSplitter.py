@@ -1,5 +1,5 @@
 from BeautifulSoup import *
-import copy
+import copy, os, sys
 
 class PackageSplitter:
     def __init__(self, path, prefix = 'package_'):
@@ -137,3 +137,14 @@ class PackageSplitter:
             
             self.data[self.__GetPackageName(i).replace(u'Package ', u'')][i] = self.packages[i]
         
+
+if len(sys.argv) == 4:
+    PATH = sys.argv[1]
+    OUTF = sys.argv[2]
+    PREF = sys.argv[3]
+    
+    l = PackageSplitter(PATH, PREF)
+    
+    l.CreatePackagePage(OUTF)
+else:
+    print "parameter error. It must be like this:\nrun.py PATH FILE PREFIX\nExample: run.py /doc/html/ pages.html packageDocumentation_"

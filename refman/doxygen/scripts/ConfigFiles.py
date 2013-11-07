@@ -1,5 +1,5 @@
 from BeautifulSoup import *
-import copy
+import copy, sys
 
 class ConfigFiles:
     def __init__(self, path, outputFile, prefix = "configfilesList_"):
@@ -100,3 +100,13 @@ class ConfigFiles:
             self.WriteFile(self.FileName(i), page)
             if i == 'A': self.WriteFile('configfiles.html', page)
         
+
+if len(sys.argv) == 3:
+    PATH = sys.argv[1]
+    OUTF = sys.argv[2]
+    
+    l = ConfigFiles(PATH, OUTF)
+    
+    l.CreateConfigFilePage()
+else:
+    print "parameter error. It must be like this: run.py /doc/html/ output.html"

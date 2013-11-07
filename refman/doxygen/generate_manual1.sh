@@ -6,7 +6,7 @@ set CMSSW_BASE = `echo $CMSSW_BASE`
 set VER     = `echo $CMSSW_VERSION`
 set SOURCE  = $CMSSW_BASE/src
 set SCRIPTS = $CMSSW_BASE/src/Documentation/ReferenceManualScripts/doxygen/scripts
-set DOXY    = $SCRIPTS/doxyfiles
+set DOXY    = $CMSSW_BASE/src/Documentation/ReferenceManualScripts/doxygen/doxyfiles
 set DOC     = $CMSSW_BASE/doc
 
 if (-e $DOC) then
@@ -20,16 +20,12 @@ sed -e 's|@CMSSW_IN@|'$SOURCE'|g' -e 's|@CMSSW_OUT@|'$DOC'|g' -e 's|@DOXY_PATH@|
 
 time doxygen $DOXY/configfile.conf
 
-time python $SCRIPTS/MainPageGenerator/run.py $DOC/html/ index.html $VER
+time python $SCRIPTS/MainPageGenerator.py $DOC/html/ index.html $VER
 echo
-time python $SCRIPTS/ClassNamespaceSplitter/run.py $DOC/html/ annotated.html annotatedList_
+time python $SCRIPTS/Splitter.py $DOC/html/ annotated.html annotatedList_
 echo
-time python $SCRIPTS/ConfigFiles/run.py $DOC/html/ configfiles.html
+time python $SCRIPTS/ConfigFiles.py $DOC/html/ configfiles.html
 echo
-time python $SCRIPTS/ClassNamespaceSplitter/run.py $DOC/html/ namespaces.html namespacesList_
+time python $SCRIPTS/Splitter.py $DOC/html/ namespaces.html namespacesList_
 echo
-time python $SCRIPTS/PackageSplitter/run.py $DOC/html/ pages.html packageDocumentation_
-
-cp $SCRIPTS/MainPageGenerator/ReferenceManual.html $DOC/html/
-
-find $DOC/html/ -name "*.html" ! \( -name "*dir_*" -o -name "*globals_*" -o -name "*namespacemembers_*" -o -name "*functions_*" \) -print | sed -e 's|'$CMSSW_BASE'|'$VER'|g' | sort > $CMSSW_BASE/$VER.index
+time python $SCRIPTS/PackageSplitter.py $DOC/html/ pages.html packageDocumentation_
