@@ -31,13 +31,13 @@ class MainPageGenerator:
         
         self.GitLink            = "https://github.com/cms-sw/cmssw/tree/" + self.CMSVER + "/%s/%s"
         
-        title = "<center>\n<h1>CMSSW Documentation</h1>\n<h2>" + self.CMSVER + "</h2>\n</center>\n"
-        links = """
+        self.title = "<center>\n<h1>CMSSW Documentation</h1>\n<h2>" + self.CMSVER + "</h2>\n</center>\n"
+        self.links = """
 <p style="margin-left:10px;">
 Learn <a href="ReferenceManual.html">how to build Reference Manual</a><br>
 Learn more about <a target="_blank" href="http://www.stack.nl/~dimitri/doxygen/commands.html">special doxygen commands</a>
 </p>\n\n"""
-        head = """
+        self.head = """
 <!-- Content Script & Style -->
 <script type="text/javascript">
 var itemList = [];
@@ -85,16 +85,19 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
         self.mainPageTemplate   = self.ReadFile("index.html")
         self.WriteFile("index_backup.html", self.mainPageTemplate)          #backup file
         soup     = BeautifulSoup(self.mainPageTemplate)
-        soup.head.insert(len(soup.head), head)
+        soup.head.insert(len(soup.head), self.head)
         
         contents = soup.find("div", { "class" : "contents" })
         for child in contents.findChildren():
             child.extract()
-        contents.insert(0, title + self.contentStamp + links)
+        contents.insert(0, self.contentStamp)
         self.mainPageTemplate = str(soup)
         self.mainPageTemplate = self.mainPageTemplate.replace("CSCDQM Framework Guide", "")
         self.mainPageTemplate = self.mainPageTemplate.replace('&lt;','<').replace('&gt;', '>')
         print "Main page template created..."
+
+        self.CreateBuildRefMan()
+        print "RefMan created..."
         
         self.treePageTamplate   = self.ReadFile("tree_template.html", test) #!! pathFlag = False
         self.classesSource      = self.ReadFile("classes.html")
@@ -245,7 +248,47 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
         if self.data == None:
             self.PrepareData()
         self.WriteFile(fileName, json.dumps(self.data, indent = 1))
+    
+    def CreateBuildRefMan(self):
+        content = """<h1>The Reference Manual </h1>
+        This is the CMSSW Reference Manual, the reference documentation of all classes and packages in CMSSW.<p>
+        This page explains how to write the documentation for your code.
 
+        </p><h2>Class Documentation</h2>
+
+        Classes and methods are documented with properly formatted <a target="_blank" class="el" href="d3/d88/namespacecomments.html">comments</a> in the code.<p>
+        Here is a template of a documented <a target="_blank" href="http://cmssw.cvs.cern.ch/cgi-bin/cmssw.cgi/CMSSW/Documentation/CodingRules/Template.h?rev=HEAD&amp;cvsroot=CMSSW&amp;content-type=text/vnd.viewcvs-markup">.h file</a>, and of a <a target="_blank" href="http://cmssw.cvs.cern.ch/cgi-bin/cmssw.cgi/CMSSW/Documentation/CodingRules/Template.cc?rev=HEAD&amp;cvsroot=CMSSW&amp;content-type=text/vnd.viewcvs-markup">.cc file</a>. The resulting doxygen page is <a target="_blank" class="el" href="d6/d3e/classTemplate.html">here</a>.
+
+        </p><h2>Package Documentation</h2>
+
+        Each package should contain a very brief description of its content and purpose. Remember that this is a reference, and not a user's guide: tutorials, howtos, etc. are best documented in the <a target="_blank" href="https://twiki.cern.ch/twiki/bin/view/CMS/SWGuide">CMS Offline Guide</a> and in the <a target="_blank" href="https://twiki.cern.ch/twiki/bin/view/CMS/WorkBook">WorkBook</a>. Cross links between the CMS Offline Guide and the WorkBook and this manual are a good way to avoid duplication of content.<p>
+        This documentation should be written in a file [Package]/doc/[Package].doc. The simplest way of doing this is to go to the doc/ directory in your package and then run the script  
+        <a target="_blank" href="http://cmssw.cvs.cern.ch/cgi-bin/cmssw.cgi/*checkout*/CMSSW/Documentation/ReferenceManualScripts/scripts/makePackageDoc?rev=HEAD&amp;cvsroot=CMSSW">makePackageDoc</a>,
+         which is available in your PATH.
+
+        </p><h2> How to generate your documentation locally </h2>
+        One you have updated your documentation, you can look at how it displays in the following way:
+
+         <ul>
+           <li>check out the following packages:  
+        <pre> &gt; cmsrel CMSSW_5_X_X
+         &gt; cd CMSSW_5_X_X/src/
+         &gt; cmsenv
+         &gt; cvs co Documentation
+
+         &gt; cvs co YOUR_PACKAGE(s)
+
+         &gt; cd ..
+
+         &gt; scram b doxygen
+
+         wait...
+
+         &gt; firefox doc/html/index.html </pre>
+          </li>
+        </ul>"""
+        self.WriteFile('ReferenceManual.html', self.mainPageTemplate.replace(self.contentStamp, content))
+        
     def CreateNewMainPage(self, outputFileName):
         if self.data == None:
             self.PrepareData()
@@ -290,7 +333,7 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
             """ % (i.replace(' ', '_'))
             
         contents = contents + "</table>"
-        self.WriteFile(outputFileName, self.mainPageTemplate.replace(self.contentStamp, contents))
+        self.WriteFile(outputFileName, self.mainPageTemplate.replace(self.contentStamp, self.title + contents + self.links))
     
     def __NewTreePage(self, domain):
         

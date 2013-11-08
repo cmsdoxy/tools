@@ -117,7 +117,7 @@ class Splitter:
         data = data + '<div class="contents"><table width="100%">'
         
         for i in itemList:
-            data = data + '<tr><td class="indexkey"><a class="el" href="%s">%s</a></td><td class="indexvalue">%s</td></tr>' % i
+            data = data + '<tr><td class="indexkey"><a class="el" href="%s">%s</a></td><td class="indexvalue">%s</td></tr>\n' % i
         
         data = data + '</table></div>'
         data = data + self.GetFooter()
@@ -176,12 +176,13 @@ class Splitter:
                     data[path[self.__GetDepth(i)][0].upper()] = []
                     
                 if not self.__GetName(i).upper()[0] in self.List:
-                    data[self.__GetName(i).upper()[0]] = []
-                    
-                data[path[self.__GetDepth(i)][0].upper()].append((self.__GetLink(i),
+                    data[self.__GetName(i)[0].upper()] = []
+                
+                if path[self.__GetDepth(i)] != self.__GetName(i):
+                    data[path[self.__GetDepth(i)][0].upper()].append((self.__GetLink(i),
                                                                      path[self.__GetDepth(i)], 
                                                                      self.__GetInfo(i)))
-                data[self.__GetName(i).upper()[0]].append((self.__GetLink(i),
+                data[self.__GetName(i)[0].upper()].append((self.__GetLink(i),
                                                             self.__GetName(i), 
                                                             self.__GetInfo(i)))
         
