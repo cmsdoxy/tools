@@ -271,16 +271,12 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
 
          <ul>
            <li>check out the following packages:  
-        <pre> &gt; cmsrel CMSSW_5_X_X
-         &gt; cd CMSSW_5_X_X/src/
+        <pre> &gt; cmsrel CMSSW_7_X_X
+         &gt; cd CMSSW_7_X_X/
          &gt; cmsenv
-         &gt; cvs co Documentation
+         &gt; git cms-addpkg Documentation
 
-         &gt; cvs co YOUR_PACKAGE(s)
-
-         &gt; cd ..
-
-         &gt; scram b doxygen
+         &gt; generate_reference_manual
 
          wait...
 
@@ -415,7 +411,8 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
         else:
             html = html + '\t<span class="file">%s</span>\n' % title
         return html + '\t</li>\n'
-        if len(sys.argv) == 4:
+        
+if len(sys.argv) == 4:
     PATH = sys.argv[1]
     OUTF = sys.argv[2]
     VER  = sys.argv[3]
