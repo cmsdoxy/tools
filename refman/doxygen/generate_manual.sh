@@ -14,11 +14,11 @@ if (-e $DOC) then
     mkdir $DOC
 endif
 
-rm $DOXY/configfile.conf
-
 sed -e 's|@CMSSW_IN@|'$SOURCE'|g' -e 's|@CMSSW_OUT@|'$DOC'|g' -e 's|@DOXY_PATH@|'$DOXY'|g' $DOXY/configfile > $DOXY/configfile.conf
 
 time doxygen $DOXY/configfile.conf
+
+rm $DOXY/configfile.conf
 
 time python $SCRIPTS/MainPageGenerator.py $DOC/html/ index.html $VER
 echo
