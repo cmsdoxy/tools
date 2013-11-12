@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sh $CMSSW_RELEASE_BASE/src/Documentation/ReferenceManualScripts/doxygen/generate_manual.sh
