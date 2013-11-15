@@ -2,8 +2,9 @@ import json, urllib2, os, sys
 from BeautifulSoup import *
 
 class MainPageGenerator:
-    def __init__(self, path = "", test = False, cmsVer = ""):
+    def __init__(self, dataPath, path = "", cmsVer = ""):
         self.path = path
+        self.dataPath = path
 
         self.CMSVER             = cmsVer
 
@@ -99,7 +100,7 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
         self.CreateBuildRefMan()
         print "RefMan created..."
         
-        self.treePageTamplate   = self.ReadFile("tree_template.html", test) #!! pathFlag = False
+        self.treePageTamplate   = self.ReadFile(self.dataPath + "/tree_template.html")
         self.classesSource      = self.ReadFile("classes.html")
         self.filesSource        = self.ReadFile("files.html")
         self.packageSource      = self.ReadFile("pages.html")
@@ -417,10 +418,10 @@ if len(sys.argv) == 4:
     OUTF = sys.argv[2]
     VER  = sys.argv[3]
       
-    os.system("cp -rf %s/iframes/ %s" % (os.path.split(__file__)[0], PATH))
+    #os.system("cp -rf %s../data/iframes/ %s" % (os.path.split(__file__)[0], PATH))
     
     l = MainPageGenerator(PATH, cmsVer = VER)
     
     l.CreateNewMainPage(OUTF)
 else:
-    print "parameter error. It must be like this: run.py /doc/html/ output.html"
+    print "parameter error. It must be like this: run.py DATA_PATH/ OUTPUT_PATH/ CMS_VER"

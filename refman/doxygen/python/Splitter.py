@@ -54,7 +54,7 @@ class Splitter:
 
         #editted backup
         edb = self.GetHeader() + self.CreateTab("All") + self.GetDivHeader() + self.GetContent() + self.GetFooter()
-        self.WritePage(self.backupPrefix + self.fileName, edb)
+        self.WritePage(self.prefix + '_ALL.html', edb)
         
     def __GetName(self, node):
         if node.a:
@@ -91,9 +91,9 @@ class Splitter:
             self.parsedSource = self.GetNsC()
         header = '<div class="tabs3" align="center">\n<ul class="tablist">\n'
         if current == "All":
-            all_ = '<li class="current"><a href="%s"><span>All</span></a></li>\n' % (self.backupPrefix + self.fileName)
+            all_ = '<li class="current"><a href="%s"><span>All</span></a></li>\n' % (self.prefix + '_ALL.html')
         else:
-            all_ = '<li><a href="%s"><span>All</span></a></li>\n' % (self.backupPrefix + self.fileName)
+            all_ = '<li><a href="%s"><span>All</span></a></li>\n' % (self.prefix + '_ALL.html')
         footer = '</ul>\n</div>\n'
         tab    = ''
         
