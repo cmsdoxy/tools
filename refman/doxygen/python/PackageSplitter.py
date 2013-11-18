@@ -1,7 +1,11 @@
 from BeautifulSoup import *
 import copy, os, sys
 
+## PackageSplitter class is used for splitting package web page (pages.html) to increase usability
 class PackageSplitter:
+    ## Constructor method.
+    # @param path is the reference manual directory path and it is used as destination and source.
+    # @param prefix is used for file naming as prefix.
     def __init__(self, path, prefix = 'package_'):
         self.path           = path
         self.prefix         = prefix

@@ -1,10 +1,14 @@
 from BeautifulSoup import *
 import sys
 
+## Splitter class is used for splitting class and namespace web pages to reduce access time.
 class Splitter:
-    def __init__(self, filePath, fileName, prefix):
+    # @param path is the reference manual directory path and it is used as destination and source.
+    # @param fileName is output file name. (You should consider the menu.js script (https://cmssdt.cern.ch/SDT/doxygen/common/menu.js) while you are naming output file)
+    # @param prefix is used for file naming as prefix.
+    def __init__(self, path, fileName, prefix):
         self.fileName = fileName
-        self.filePath = filePath
+        self.filePath = path
         self.prefix   = prefix
         
         self.backupPrefix= prefix + 'backup_'
@@ -19,7 +23,7 @@ class Splitter:
         self.chr         = '_'
         self.List        = ()
         
-        file = open(filePath + fileName, 'r')
+        file = open(path + fileName, 'r')
         self.source = file.read()
         file.close()
         

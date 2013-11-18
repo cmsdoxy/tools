@@ -1,7 +1,12 @@
 import json, urllib2, os, sys
 from BeautifulSoup import *
 
+## MainPageGenerator class is used for generating main page that contains domain trees (Analysis, Calibration and Alignment, Core, DAQ etc.) 
 class MainPageGenerator:
+    ## Constructor method.
+    # @param dataPath parameter gives path of data directory that contains .js, .css and image files needed for generating tree pages
+    # @param path is the reference manual directory path and it is used as destination and source.
+    # @param cmsVer is version of CMSSW.
     def __init__(self, dataPath, path = "", cmsVer = ""):
         self.path = path
         self.dataPath = path

@@ -1,7 +1,12 @@
 from BeautifulSoup import *
 import copy, sys
 
+## ConfigFiles class is used for generating 'config files' html page.
 class ConfigFiles:
+    ## Constructor method.
+    # @param path is the reference manual directory path and it is used as destination and source.
+    # @param outputFile is output file name. It should be "configfiles.html" for backward compatibility.
+    # @param prefix is used for file naming as prefix.
     def __init__(self, path, outputFile, prefix = "configfilesList_"):
         self.path           = path
         self.outputFile     = outputFile
