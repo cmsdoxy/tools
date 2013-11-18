@@ -201,4 +201,4 @@ if len(sys.argv) > 3:
     s.CreatePages()
 else:
     print "Not enough parameters: file.py PATH FILE PREFIX"
-    print "Example: python run.py /doc/html/ annotated.html annotated_"
+    print "Example: python Splitter.py CMSSW/doc/html/ annotated.html annotated_"

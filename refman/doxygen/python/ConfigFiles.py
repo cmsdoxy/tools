@@ -114,4 +114,4 @@ if len(sys.argv) == 3:
     
     l.CreateConfigFilePage()
 else:
-    print "parameter error. It must be like this: run.py /doc/html/ output.html"
+    print "parameter error. It must be like this: python ConfigFiles.py CMSSW/doc/html/ output.html"

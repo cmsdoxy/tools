@@ -7,9 +7,9 @@ class MainPageGenerator:
     # @param dataPath parameter gives path of data directory that contains .js, .css and image files needed for generating tree pages
     # @param path is the reference manual directory path and it is used as destination and source.
     # @param cmsVer is version of CMSSW.
-    def __init__(self, dataPath, path = "", cmsVer = ""):
+    def __init__(self, dataPath, path, cmsVer = ""):
         self.path = path
-        self.dataPath = path
+        self.dataPath = dataPath
 
         self.CMSVER             = cmsVer
 
@@ -105,7 +105,7 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
         self.CreateBuildRefMan()
         print "RefMan created..."
         
-        self.treePageTamplate   = self.ReadFile(self.dataPath + "/tree_template.html")
+        self.treePageTamplate   = self.ReadFile(self.dataPath + "tree_template.html", pathFlag = False)
         self.classesSource      = self.ReadFile("classes.html")
         self.filesSource        = self.ReadFile("files.html")
         self.packageSource      = self.ReadFile("pages.html")
@@ -116,7 +116,7 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
             print "Read:", self.path + fileName
             f = open(self.path + fileName)
         else:
-            f = open(os.path.split(__file__)[0] + '/' + fileName)
+            f = open(fileName)
             print "Read:", fileName
         data = f.read()
         f.close()
@@ -418,15 +418,16 @@ $(".doctable").find("td").each(function(){ if (this.id.indexOf("hoba_") != -1)it
             html = html + '\t<span class="file">%s</span>\n' % title
         return html + '\t</li>\n'
         
-if len(sys.argv) == 4:
-    PATH = sys.argv[1]
-    OUTF = sys.argv[2]
+if len(sys.argv) == 5:
+    DATA_PATH = sys.argv[1]
+    PATH = sys.argv[2]
     VER  = sys.argv[3]
+    OUTF = sys.argv[4]
       
     #os.system("cp -rf %s../data/iframes/ %s" % (os.path.split(__file__)[0], PATH))
     
-    l = MainPageGenerator(PATH, cmsVer = VER)
+    l = MainPageGenerator(DATA_PATH, PATH, cmsVer = VER)
     
     l.CreateNewMainPage(OUTF)
 else:
-    print "parameter error. It must be like this: run.py DATA_PATH/ OUTPUT_PATH/ CMS_VER"
+    print "parameter error. It must be like this: python MainPageGenerator.py DATA_PATH/ CMSSW/doc/html/ CMS_VER"

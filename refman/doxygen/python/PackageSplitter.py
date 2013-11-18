@@ -151,4 +151,4 @@ if len(sys.argv) == 4:
     
     l.CreatePackagePage(OUTF)
 else:
-    print "parameter error. It must be like this:\nrun.py PATH FILE PREFIX\nExample: run.py /doc/html/ pages.html packageDocumentation_"
+    print "parameter error. It must be like this:\nrun.py CMSSW/doc/html/ INPUT_FILE PREFIX\nExample: PackageSplitter.py OUTPUT_PATH/ pages.html packageDocumentation_"
