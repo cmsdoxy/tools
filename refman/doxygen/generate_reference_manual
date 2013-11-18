@@ -23,7 +23,7 @@ time doxygen $DATA/configfile.conf
 
 rm $DATA/configfile.conf
 
-time python $SCRIPTS/MainPageGenerator.py $DATA $DOC/html/ index.html $VER
+time python $SCRIPTS/MainPageGenerator.py $DATA/ $DOC/html/ index.html $VER
 echo
 time python $SCRIPTS/Splitter.py $DOC/html/ annotated.html annotatedList_
 echo
