@@ -7,8 +7,6 @@ Created on Sep 24, 2013
 
 import json
 
-LPC = ["BAYLOR-UNIV", "BOSTON-UNIV", "BROWN-UNIV", "CALTECH", "CARNEGIE-MELLON", "CHICAGO", "COLORADO", "CORNELL", "FERMILAB", "FLORIDA-FIU", "FLORIDA-STATE", "FLORIDA-TECH", "FLORIDA-UNIV", "IOWA", "KANSAS-STATE", "KANSAS-UNIV", "LIVERMORE", "MINNESOTA", "MISSISSIPPI", "NEBRASKA", "NORTHWESTERN", "NOTRE_DAME", "PRINCETON", "PUERTO_RICO", "PURDUE", "PURDUE-CALUMET", "ROCKEFELLER", "RUTGERS", "SUNY-BUFFALO", "TENNESSEE", "TEXAS-TAMU", "TEXAS-TECH", "VIRGINIA-UNIV"]
-
 LPC = ["BAYLOR-UNIV", "BOSTON-UNIV", "BROWN-UNIV", "CARNEGIE-MELLON", "CHICAGO", "COLORADO", "CORNELL", "FERMILAB", "FLORIDA-FIU", "FLORIDA-STATE", "FLORIDA-TECH", "IOWA", "KANSAS-STATE", "KANSAS-UNIV", "LIVERMORE", "MINNESOTA", "MISSISSIPPI", "NEBRASKA", "NOTRE_DAME", "PUERTO_RICO", "PURDUE", "PURDUE-CALUMET", "ROCKEFELLER", "RUTGERS", "SUNY-BUFFALO", "TENNESSEE", "TEXAS-TAMU", "TEXAS-TECH", "VIRGINIA-UNIV"]
 
 analysies_json = ""
@@ -25,17 +23,17 @@ def isInLPC(institute):
     return False
 
 def load_usa_lpc_authors_csv():
-    f = open('data/usa_lpc_authors.csv', 'r')
+    f = open('data/LPCauthors-MN-March2014.csv', 'r')
     lines = f.read().split("\n")
     for line in lines[1:]:
 #        print line
         columns = line.split("|")
-        if len(columns)>15:
+        if len(columns) == 7:
             fname = columns[4].replace("\"", "").replace("'", "")
             name = columns[3].replace("\"", "").replace("'", "")
             
             isLPC = False
-            for i in range(13,17):  #N = 13, O = 14, P = 15, Q = 16
+            for i in range(5,7):  #lpc-fellows = 5, lpc-all = 6
                 if columns[i]:
                     isLPC = True
                     break
