@@ -26,13 +26,13 @@ def parseANotes():
     bs     = BeautifulSoup(source)
     tr     = bs.findAll("tr", {})
          
-    CMSNoteIDIndex  = 0
-    TitleIndex      = 1
-    submitDateIndex = 2
-    CountryIndex    = 3
-    InstCodeIndex   = 4
-    SubmitterIndex  = 5
-    NauthIndex      = 6
+    CMSNoteIDIndex  = 0#0
+    TitleIndex      = 6#1
+    submitDateIndex = 1#2
+    CountryIndex    = 2#3
+    InstCodeIndex   = 3#4
+    SubmitterIndex  = 4#5
+    NauthIndex      = 5#6
         
     # Data format:
     # [[CMSNoteID, Title, submitDate, Country, InstCode, Submitter, Nauth], ... ]
