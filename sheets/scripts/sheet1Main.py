@@ -146,7 +146,10 @@ for tr in trs:
 
         # GET FROM LOCAL
         inp = open("data/analysies/id_"+id+".html", "r")
-        analysisHTML = inp.read()
+        try:
+            analysisHTML = unicode(inp.read())
+        except:
+            analysisHTML = inp.read()
         inp.close()
 
         analysisSoup = BeautifulSoup(analysisHTML)
@@ -231,8 +234,15 @@ for tr in trs:
         output_line.append(len(notes).__str__())                            # number of notes
         output_line.append(notes_usa.__str__())                             # number of notes where submitter is from USA
         
-#        print output_line
-        out.write(" | ".join([s.encode('utf-8') for s in output_line]))
+        print output_line
+        print "data/analysies/id_"+id+".html"
+        for s in output_line:
+#            out.write(" | ".join(s.encode('utf-8')))
+            try:
+                out.write(" | ".join(s.encode('utf-8')))
+            except:
+                out.write(" | ".join(s))
+#        out.write(u" | ".join([s for s in output_line]))
         
 
         out.write("\n")
