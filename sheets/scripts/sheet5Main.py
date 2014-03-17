@@ -28,12 +28,12 @@ def load_usa_lpc_authors_csv():
     for line in lines[1:]:
 #        print line
         columns = line.split("|")
-        if len(columns) == 7:
+        if len(columns) > 14:
             fname = columns[4].replace("\"", "").replace("'", "")
             name = columns[3].replace("\"", "").replace("'", "")
             
             isLPC = False
-            for i in range(5,7):  #lpc-fellows = 5, lpc-all = 6
+            for i in range(13,15):  #lpc-fellows = 13, lpc-all = 14
                 if columns[i]:
                     isLPC = True
                     break
@@ -59,11 +59,14 @@ analysis_codes.sort()
 # TOTALS
 arc_chair_from_USA_total = 0
 arc_chair_from_LPC_total = 0
+arc_chair_from_LPC_total_N = 0 ###
 cadi_contact_from_USA_total = 0
 cadi_contact_from_LPC_total = 0
+cadi_contact_from_LPC_total_N = 0###
 arc_members_num_total = 0
 arc_members_num_from_USA_total = 0
 arc_members_num_from_LPC_total = 0
+arc_members_num_from_LPC_total_N = 0###
 submitters_num_total = 0
 submitters_num_from_USA_total = 0
 submitters_num_from_LPC_total = 0
@@ -75,6 +78,7 @@ authors_num_from_LPC_N_total = 0
 institutes_num_total = 0
 institutes_USA_num_total = 0
 institutes_LPC_num_total = 0
+institutes_LPC_num_total_N = 0###
 
 # going through all cadi analysies
 for analysis_code in analysis_codes:
@@ -82,11 +86,14 @@ for analysis_code in analysis_codes:
     status = ""
     arc_chair_from_USA = "-"
     arc_chair_from_LPC = "-"
+    arc_chair_from_LPC_N = "-"###
     cadi_contact_from_USA = "-"
     cadi_contact_from_LPC = "-"
+    cadi_contact_from_LPC_N = "-"###
     arc_members_num = 0
     arc_members_num_from_USA = 0
     arc_members_num_from_LPC = 0
+    arc_members_num_from_LPC_N = 0###
     submitters_num = 0
     submitters_num_from_USA = 0
     submitters_num_from_LPC = 0
@@ -117,6 +124,12 @@ for analysis_code in analysis_codes:
         else:
             arc_chair_from_LPC = 0
 
+        # arc_chair_from_LPC_N###
+        if usa_lpc_authors.has_key(chairperson['fullname']) and usa_lpc_authors[chairperson['fullname']]:
+            arc_chair_from_LPC_N = 1
+        else:
+            arc_chair_from_LPC_N = 0
+
     ### CADI contact
     cadi_contact = analysis["cadi_contact"]
     if len(cadi_contact.keys()) > 0:
@@ -131,6 +144,12 @@ for analysis_code in analysis_codes:
             cadi_contact_from_LPC = 1
         else:
             cadi_contact_from_LPC = 0
+
+        # cadi_contact_from_LPC_N###
+        if usa_lpc_authors.has_key(cadi_contact['fullname']) and usa_lpc_authors[cadi_contact['fullname']]:
+            cadi_contact_from_LPC_N = 1
+        else:
+            cadi_contact_from_LPC_N = 0
     
     ### ARC Members
     
@@ -148,12 +167,16 @@ for analysis_code in analysis_codes:
         #    arc_members_num_from_LPC
         if isInLPC(member["institute"]):
             arc_members_num_from_LPC += 1
+        # of ARC members from LPC NEW###
+        if usa_lpc_authors.has_key(member_key) and usa_lpc_authors[member_key]:
+            arc_members_num_from_LPC_N += 1
             
     ### AN Notes submitters
 
     institutes = {}
     institutes_USA = {}
     institutes_LPC = {}
+    institutes_LPC_N = {}###
     
     # submitters_num = 0
     submitters_num = analysis["notes_num"]
@@ -192,13 +215,18 @@ for analysis_code in analysis_codes:
                     #    institutes_num_from_USA
                     if not institutes_USA.has_key(author["institute"]):
                         institutes_USA[author["institute"]] = author["country"]
-                    
+
                 #    authors_num_from_LPC
                 if isInLPC(author["institute"]):
                     authors_num_from_LPC += 1
                     #    institutes_num_from_LPC
                     if not institutes_LPC.has_key(author["institute"]):
                         institutes_LPC[author["institute"]] = author["country"]
+
+                if usa_lpc_authors.has_key(author_key) and usa_lpc_authors[author_key]:####
+                    #    institutes_num_from_LPC_N###
+                    if not institutes_LPC_N.has_key(author["institute"]):###
+                        institutes_LPC_N[author["institute"]] = author["country"]###
                 
                 # checking if authors belongs to LPC (in new list provided by Sudhir)
                 if usa_lpc_authors.has_key(author_key) and usa_lpc_authors[author_key]:
@@ -209,11 +237,14 @@ for analysis_code in analysis_codes:
     output_line.append(status)
     output_line.append(arc_chair_from_USA.__str__())
     output_line.append(arc_chair_from_LPC.__str__())
+    output_line.append(arc_chair_from_LPC_N.__str__())###
     output_line.append(cadi_contact_from_USA.__str__())
     output_line.append(cadi_contact_from_LPC.__str__())
+    output_line.append(cadi_contact_from_LPC_N.__str__())###
     output_line.append(arc_members_num.__str__())
     output_line.append(arc_members_num_from_USA.__str__())
     output_line.append(arc_members_num_from_LPC.__str__())
+    output_line.append(arc_members_num_from_LPC_N.__str__())###
     output_line.append(submitters_num.__str__())
     output_line.append(submitters_num_from_USA.__str__())
     output_line.append(submitters_num_from_LPC.__str__())
@@ -225,6 +256,7 @@ for analysis_code in analysis_codes:
     output_line.append(len(institutes).__str__())
     output_line.append(len(institutes_USA).__str__())
     output_line.append(len(institutes_LPC).__str__())
+    output_line.append(len(institutes_LPC_N).__str__())
     
     output += " | ".join(output_line) + "\n"
     
@@ -233,16 +265,23 @@ for analysis_code in analysis_codes:
         
     if (arc_chair_from_LPC != "-"):
         arc_chair_from_LPC_total += arc_chair_from_LPC
+
+    if (arc_chair_from_LPC_N != "-"):###
+        arc_chair_from_LPC_total_N += arc_chair_from_LPC_N###
         
     if (cadi_contact_from_USA != "-"):
         cadi_contact_from_USA_total += cadi_contact_from_USA
     
     if (cadi_contact_from_LPC != "-"):
         cadi_contact_from_LPC_total += cadi_contact_from_LPC
+
+    if (cadi_contact_from_LPC_N != "-"):
+        cadi_contact_from_LPC_total_N += cadi_contact_from_LPC_N
         
     arc_members_num_total += arc_members_num
     arc_members_num_from_USA_total += arc_members_num_from_USA
     arc_members_num_from_LPC_total += arc_members_num_from_LPC
+    arc_members_num_from_LPC_total_N += arc_members_num_from_LPC_N
     submitters_num_total += submitters_num
     submitters_num_from_USA_total += submitters_num_from_USA
     submitters_num_from_LPC_total += submitters_num_from_LPC
@@ -254,6 +293,7 @@ for analysis_code in analysis_codes:
     institutes_num_total += len(institutes)
     institutes_USA_num_total += len(institutes_USA)
     institutes_LPC_num_total += len(institutes_LPC)
+    institutes_LPC_num_total_N += len(institutes_LPC_N)###
 
 
 output_line = []
@@ -261,11 +301,14 @@ output_line.append("TOTAL")
 output_line.append("")
 output_line.append(arc_chair_from_USA_total.__str__())
 output_line.append(arc_chair_from_LPC_total.__str__())
+output_line.append(arc_chair_from_LPC_total_N.__str__())###
 output_line.append(cadi_contact_from_USA_total.__str__())
 output_line.append(cadi_contact_from_LPC_total.__str__())
+output_line.append(cadi_contact_from_LPC_total_N.__str__())###
 output_line.append(arc_members_num_total.__str__())
 output_line.append(arc_members_num_from_USA_total.__str__())
 output_line.append(arc_members_num_from_LPC_total.__str__())
+output_line.append(arc_members_num_from_LPC_total_N.__str__())###
 output_line.append(submitters_num_total.__str__())
 output_line.append(submitters_num_from_USA_total.__str__())
 output_line.append(submitters_num_from_LPC_total.__str__())
@@ -277,10 +320,11 @@ output_line.append(authors_num_from_LPC_N_total.__str__())
 output_line.append(institutes_num_total.__str__())
 output_line.append(institutes_USA_num_total.__str__())
 output_line.append(institutes_LPC_num_total.__str__())
+output_line.append(institutes_LPC_num_total_N.__str__())###
 
 total = " | ".join(output_line) + "\n" 
     
-header = "Analysis code | Status | ARC chair from USA | ARC chair from LPC | Cadi contact from US | Cadi contact LPC | # of ARC members | # of ARC members form USA | # of ARC members from LPC | # of an submitters | # of submitters from USA | # of AN submitters from LPC | # of AN submitters from LPC NEW | # AN authors | # of AN authors from USA | # of  AN authors from LPC | # of  AN authors from LPC NEW | # of institutes | # in institutes from USA | # of institutes from LPC\n"
+header = "Analysis code | Status | ARC chair from USA | ARC chair from LPC | ARC chair from LPC NEW | Cadi contact from US | Cadi contact LPC | Cadi contact LPC NEW | # of ARC members | # of ARC members form USA | # of ARC members from LPC | # of ARC members from LPC NEW | # of an submitters | # of submitters from USA | # of AN submitters from LPC | # of AN submitters from LPC NEW | # AN authors | # of AN authors from USA | # of  AN authors from LPC | # of  AN authors from LPC NEW | # of institutes | # in institutes from USA | # of institutes from LPC | # of institutes from LPC NEW\n"
     
 f = open("sheets/sheet5.csv","w")
 f.write(header+output+header+total)
