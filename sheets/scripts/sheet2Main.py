@@ -143,18 +143,6 @@ def getNameFromFile(fileName):
         
     return font[authorsIndex].text.replace(u"~",  " ").encode('utf-8')
 
-# String functions
-def clearSpaceCharacters(str_):
-    # input: " Mehmet Altundag   "
-    # Output: "Mehmet Altundag"
-    indexA = 0
-    indexB = len(str_) - 1
-    while(str_[indexA] == " "):
-        indexA = indexA + 1
-    while(str_[indexB] == " "):
-        indexB = indexB - 1
-    return str_[indexA:indexB+1]
-
 def digitTest(str_):
     if "0" in str_: return True
     if "1" in str_: return True
@@ -206,46 +194,40 @@ def parseName(authors):
 
 def match(parsed_name):
     rownumbers = []
-    if not parsed_name:
-        return False
     for i in parsed_name:
         counter = 0
         matchFlag =  0
         multiName = []
         nameRow = None
-        i = clearSpaceCharacters(i)
         for j in parsedMemberInfo:
-            # Ex: Meric Taze
+            # Ex: FIRSTN LASTN
             if j[1].lower() + ' ' + j[0].lower() == i.lower():
                 nameRow = counter
                 matchFlag =  matchFlag + 1
                 multiName.append(j[4])
-            # Ex: Taze Meric
-            #if j[0].lower() + ' ' + j[1].lower() == i.lower():
-            #    nameRow = counter
-            #    matchFlag =  matchFlag + 1
-            #    multiName.append(j[4])
-            # Ex: M. Taze
+            # Ex: F. LASTN
             if j[1][0].lower() + '. ' + j[0].lower() == i.lower():
                 nameRow = counter
                 matchFlag =  matchFlag + 1
                 multiName.append(j[4])
-            # Ex: T. Meric
-            if j[0][0].lower() + '. ' + j[1].lower() == i.lower():
+            # Ex: L, FIRSTNAME
+            if j[0][0].lower() + ', ' + j[1].lower() == i.lower():
                 nameRow = counter
                 matchFlag =  matchFlag + 1
                 multiName.append(j[4])
-            
-            # Ex: M.Taze
-            if j[1][0].lower() + '.' + j[0].lower() == i.lower():
-                nameRow = counter
-                matchFlag =  matchFlag + 1
-                multiName.append(j[4])
-            # Ex: T.Meric
-            if j[0][0].lower() + '.' + j[1].lower() == i.lower():
-                nameRow = counter
-                matchFlag =  matchFlag + 1
-                multiName.append(j[4])
+            if j[1].count(' ') > 0:
+                parsedFN = j[1].split(' ')
+                firstName = parsedFN[0] + ' ' + parsedFN[1][0] + '.'
+                if firstName.lower() + ' ' + j[1].lower() == i.lower():
+                    nameRow = counter
+                    matchFlag =  matchFlag + 1
+                    multiName.append(j[4])
+                if parsedFN[0].lower() + ' ' + j[0].lower() == i.lower():
+                    nameRow = counter
+                    matchFlag =  matchFlag + 1
+                    multiName.append(j[4])
+
+
             counter += 1
         if matchFlag == 1 or (matchFlag == 2 and multiName[0] == multiName[1]):
             rownumbers.append(nameRow)
@@ -260,9 +242,6 @@ def createCSV():
                      "InstCode", "Submitter", "Nauth", "NauthUSA", "Sum of Found",
                      "Sum of Match", "Sum of Not Match", ''])
 
-#    length  = len(parsedANotes)
-#    counter = 0
-
     for i in parsedANotes:
         authors         = []
         authors_line    = []
@@ -273,50 +252,37 @@ def createCSV():
         authors     = parseName(getNameFromFile(i[0]))
         matchResult = match(authors)
 
-        if authors:
-            somofFound = len(authors)
-        else:
-            somofFound = 0
+        if authors: somofFound = len(authors)
+        else: somofFound = 0
 
-        if matchResult:
-            sumofMatch = len(matchResult)
-        else:
-            sumofMatch = 0
+        if matchResult: sumofMatch = len(matchResult)
+        else: sumofMatch = 0
 
-        if matchResult == False:
-            #print i[0], 'Latex', authors
-            for j in range(authorCount):
-                authors_line.append("#not_found(latex)#")
-                authors_line.append("#not_found(latex)#")
-                authors_line.append("#not_found(latex)#")
+        if len(matchResult) == authorCount:
+            for j in matchResult:
+                if parsedMemberInfo[j][3] == 'USA': NauthUSA += 1
+                authors_line.append(parsedMemberInfo[j][0] + ' ' + parsedMemberInfo[j][1])
+                authors_line.append(parsedMemberInfo[j][2])
+                authors_line.append(parsedMemberInfo[j][3])
         else:
-            if len(matchResult) == authorCount:
-                #print i[0], 'Perfect!'
-                for j in matchResult:
-                    if parsedMemberInfo[j][3] == 'USA': NauthUSA += 1
-                    authors_line.append(parsedMemberInfo[j][0] + ' ' + parsedMemberInfo[j][1])
-                    authors_line.append(parsedMemberInfo[j][2])
-                    authors_line.append(parsedMemberInfo[j][3])
-            else:
-                #print i[0], True, "OK!"
-                subCounter = 0
-                for j in matchResult:
-                    if parsedMemberInfo[j][3] == 'USA': NauthUSA += 1
-                    authors_line.append(parsedMemberInfo[j][0] + ' ' + parsedMemberInfo[j][1])
-                    authors_line.append(parsedMemberInfo[j][2])
-                    authors_line.append(parsedMemberInfo[j][3])
+            subCounter = 0
+            for j in matchResult:
+                if parsedMemberInfo[j][3] == 'USA': NauthUSA += 1
+                authors_line.append(parsedMemberInfo[j][0] + ' ' + parsedMemberInfo[j][1])
+                authors_line.append(parsedMemberInfo[j][2])
+                authors_line.append(parsedMemberInfo[j][3])
+                subCounter += 1
+            for j in authors:
+                if matchResult == []:
+                    authors_line.append(j)
+                    authors_line.append("#not_found#")
+                    authors_line.append("#not_found#")
                     subCounter += 1
-                for j in authors:
-                    if matchResult == []:
-                        authors_line.append(j)
-                        authors_line.append("#not_found#")
-                        authors_line.append("#not_found#")
-                        subCounter += 1
-                for j in range(authorCount-subCounter):
-                        authors_line.append("#not_found#")
-                        authors_line.append("#not_found#")
-                        authors_line.append("#not_found#")
-        #print i[0]
+            for j in range(authorCount-subCounter):
+                    authors_line.append("#not_found#")
+                    authors_line.append("#not_found#")
+                    authors_line.append("#not_found#")
+
         writer.writerow(["", i[0], i[1], i[2], i[3], i[4], i[5], i[6], str(NauthUSA), str(somofFound), str(sumofMatch), str(somofFound - sumofMatch) ] + authors_line + [""])
         
         json_data[i[0]] = {
@@ -332,11 +298,6 @@ def createCSV():
         for j in range(len(authors_line)/3):
             json_data[i[0]]["authors"][authors_line[j*3]] = {"institute" : authors_line[j*3 + 1], "country" : authors_line[j*3 + 2]}
         
-#        counter += 1
-#        
-#        if counter % (length/100) == 0:
-#            print "#"
-        
     csvfile.close()
     json_file = open("data/sheet2.json", 'w')
     json_file.write(json.dumps(json_data, indent = 1))
@@ -344,4 +305,3 @@ def createCSV():
 
 createCSV()
 print "Done"
-# ---------------------------------- #
