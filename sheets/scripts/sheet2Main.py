@@ -185,24 +185,24 @@ def blackList(str_):
     else:
         return False
 
-def parseName(str_):
-    if '//' in str_ or '\\' in str_ or '{' in str_ or '}' in  str_:
-        return False # Latex text
-    else:
-        result = []
-        str_ = str_.replace(" and ", ', ').replace('\n', ' ').replace('\r', ' ')
-        str_ = re.sub(r'\([^)]*\)', '', str_)
-        str_ = re.sub(r'\$[^)]*\$', '', str_)
-        result = str_.replace(", ", ",").split(',')
-        if len(result) == 1:
-            result = result[0].split(",")
-        nr = []
-        for i in result:
-            if  digitTest(i) or i == "" or blackList(i):
-                if i != "": pass
-            else:
-                nr.append(i)
-        return nr
+def parseName(authors):
+    names = []
+    # remove new lines and some replacements
+    authors = authors.replace('\n', ' ').replace(" and ", ', ').replace('\r', ' ')
+    # clean up latex statements
+    authors = re.sub(re.compile(r'\\[^\\]*?(\{.*?\}){1,}', flags = re.MULTILINE), ',', authors)
+    authors = re.sub(re.compile(r'\{.*?\}', flags = re.MULTILINE), '', authors)
+    authors = re.sub(re.compile(r'\(.*?\)', flags = re.MULTILINE), '', authors)
+    authors = re.sub(re.compile(r'\$.*?\$', flags = re.MULTILINE), '', authors)
+    # clean up whitespaces
+    authors = re.sub(re.compile(r'\s{1,}', flags = re.MULTILINE), ' ', authors)
+    for name in authors.split(','):
+        if name == '': continue
+        name = name.replace('.', '. ')
+        name = re.sub(r'\s{2,}', ' ', name)
+        name = name.rstrip().lstrip().replace('\\', '').replace('{', '').replace('}', '')
+        if not blackList(name) and name.count(' ') > 0:  names.append(name)
+    return names
 
 def match(parsed_name):
     rownumbers = []
