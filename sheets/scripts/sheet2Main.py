@@ -200,17 +200,17 @@ def match(parsed_name):
         multiName = []
         nameRow = None
         for j in parsedMemberInfo:
-            # Ex: FIRSTN LASTN
+            # FIRSTN LASTN
             if j[1].lower() + ' ' + j[0].lower() == i.lower():
                 nameRow = counter
                 matchFlag =  matchFlag + 1
                 multiName.append(j[4])
-            # Ex: F. LASTN
+            # F. LASTN
             if j[1][0].lower() + '. ' + j[0].lower() == i.lower():
                 nameRow = counter
                 matchFlag =  matchFlag + 1
                 multiName.append(j[4])
-            # Ex: L, FIRSTNAME
+            # L, FIRSTNAME
             if j[0][0].lower() + ', ' + j[1].lower() == i.lower():
                 nameRow = counter
                 matchFlag =  matchFlag + 1
@@ -218,10 +218,12 @@ def match(parsed_name):
             if j[1].count(' ') > 0:
                 parsedFN = j[1].split(' ')
                 firstName = parsedFN[0] + ' ' + parsedFN[1][0] + '.'
+                # FNAME MN. LASTNAME
                 if firstName.lower() + ' ' + j[1].lower() == i.lower():
                     nameRow = counter
                     matchFlag =  matchFlag + 1
-                    multiName.append(j[4])
+                    multiName.append(j[4]) 
+                # FIRSTN LASTN (take middle name out)
                 if parsedFN[0].lower() + ' ' + j[0].lower() == i.lower():
                     nameRow = counter
                     matchFlag =  matchFlag + 1
