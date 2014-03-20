@@ -263,7 +263,7 @@ for tr in trs:
         
         output_data["chairperson"] = json_chairperson
         
-        output_data["arc_members_num"] = len(arc_member_list)
+        #output_data["arc_members_num"] = len(arc_member_list)
         output_data["arc_members_usa"] = arc_members_usa
         
         json_arc_members={}
@@ -274,6 +274,7 @@ for tr in trs:
             json_arc_members[arc_member.fullname] = json_arc_member 
             
         output_data["arc_members"] = json_arc_members
+        output_data["arc_members_num"] = len(json_arc_members)
         
         output_data["notes_num"] = len(notes)
         output_data["notes_usa"] = notes_usa
