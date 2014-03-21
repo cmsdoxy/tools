@@ -176,7 +176,7 @@ def blackList(str_):
 def parseName(authors):
     names = []
     # remove new lines and some replacements
-    authors = authors.replace('\n', ' ').replace(" and ", ', ').replace('\r', ' ')
+    authors = authors.replace('\n', ' ').replace(" and ", ', ').replace('\r', ' ').replace('%', '')
     # clean up latex statements
     authors = re.sub(re.compile(r'\\[^\\]*?(\{.*?\}){1,}', flags = re.MULTILINE), ',', authors)
     authors = re.sub(re.compile(r'\{.*?\}', flags = re.MULTILINE), '', authors)
@@ -192,49 +192,45 @@ def parseName(authors):
         if not blackList(name) and name.count(' ') > 0:  names.append(name)
     return names
 
-def match(parsed_name):
-    rownumbers = []
-    for i in parsed_name:
+def match(names):
+    IDs = []   # row numbers
+    for i in names:
+        i = i.lower()
         counter = 0
-        matchFlag =  0
-        multiName = []
-        nameRow = None
         for j in parsedMemberInfo:
-            # FIRSTN LASTN
-            if j[1].lower() + ' ' + j[0].lower() == i.lower():
-                nameRow = counter
-                matchFlag =  matchFlag + 1
-                multiName.append(j[4])
-            # F. LASTN
-            if j[1][0].lower() + '. ' + j[0].lower() == i.lower():
-                nameRow = counter
-                matchFlag =  matchFlag + 1
-                multiName.append(j[4])
-            # L, FIRSTNAME
-            if j[0][0].lower() + ', ' + j[1].lower() == i.lower():
-                nameRow = counter
-                matchFlag =  matchFlag + 1
-                multiName.append(j[4])
-            if j[1].count(' ') > 0:
-                parsedFN = j[1].split(' ')
-                firstName = parsedFN[0] + ' ' + parsedFN[1][0] + '.'
-                # FNAME MN. LASTNAME
-                if firstName.lower() + ' ' + j[1].lower() == i.lower():
-                    nameRow = counter
-                    matchFlag =  matchFlag + 1
-                    multiName.append(j[4]) 
-                # FIRSTN LASTN (take middle name out)
-                if parsedFN[0].lower() + ' ' + j[0].lower() == i.lower():
-                    nameRow = counter
-                    matchFlag =  matchFlag + 1
-                    multiName.append(j[4])
+            firstName = j[1].lower()
+            lastName  = j[0].lower()
+            c0        = "%s %s" % (firstName, lastName)        # FIRST LAST
+            c1        = "%s %s" % (lastName, firstName)        # LAST FIRST
+            c2        = "%s, %s" % (lastName[0], firstName)    # L, FIRST
+            c3        = "%s. %s" % (firstName[0], lastName)    # F. LAST
+            c4        = None
+            if firstName.count(' ') > 0:
+                lfname= firstName.split(' ')
+                fname = []
+                for k in lfname:
+                    fname.append(k[0])
+                fname = '. '.join(fname) + '.'
+                c4    = fname + ' ' + lastName                 # F1. F2. LAST
 
-
-            counter += 1
-        if matchFlag == 1 or (matchFlag == 2 and multiName[0] == multiName[1]):
-            rownumbers.append(nameRow)
-    return rownumbers
-
+            if c0 == i:
+                IDs.append(counter)
+                break
+            elif c3 == i:
+                IDs.append(counter)
+                break
+            elif c4 and c4 == i:
+                IDs.append(counter)
+                break
+            elif c2 == i:
+                IDs.append(counter)
+                break
+            elif c1 == i:
+                IDs.append(counter)
+                break
+            counter = counter + 1
+        print "%s -> %s |  %s |  %s | %s | %s" % (i, c0, c1, c2, c3, c4)
+    return IDs
 
 def createCSV():
     csvfile         = open('sheets/sheet2.csv', 'wb')
