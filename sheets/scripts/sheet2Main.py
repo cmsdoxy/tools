@@ -229,7 +229,6 @@ def match(names):
                 IDs.append(counter)
                 break
             counter = counter + 1
-        print "%s -> %s |  %s |  %s | %s | %s" % (i, c0, c1, c2, c3, c4)
     return IDs
 
 def createCSV():
