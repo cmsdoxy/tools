@@ -1,0 +1,960 @@
+"Country"|"InstCode"|"CMSstatus"|"NameCMS"|"NamfCMS"|"lpc-fellows"|"lpc-all"
+"USA"|"ALABAMA-UNIV"|"Yes"|"Buccilli"|"Andrew"||1
+"USA"|"ALABAMA-UNIV"|"Yes"|"Charaf"|"Otman"||1
+"USA"|"ALABAMA-UNIV"|"Yes"|"Cooper"|"Seth"||1
+"USA"|"ALABAMA-UNIV"|"Yes"|"Henderson"|"Conor"||1
+"USA"|"ALABAMA-UNIV"|"Yes"|"Rumerio"|"`"||1
+"USA"|"BAYLOR-UNIV"|"Yes"|"Borzou"|"Ahmad"||
+"USA"|"BAYLOR-UNIV"|"Yes"|"Call"|"Kenneth"||
+"USA"|"BAYLOR-UNIV"|"Yes"|"Dittmann"|"Jay"||1
+"USA"|"BAYLOR-UNIV"|"Yes"|"Gunthoti"|"Kranti"||
+"USA"|"BAYLOR-UNIV"|"Yes"|"Hatakeyama"|"Kenichi"|1|1
+"USA"|"BAYLOR-UNIV"|"Yes"|"Kasmi"|"Azeddine"||1
+"USA"|"BAYLOR-UNIV"|"Yes"|"Liu"|"Hongxuan"|1|1
+"USA"|"BAYLOR-UNIV"|"No"|"Scarborough"|"Tara"||1
+"USA"|"BAYLOR-UNIV"|"No"|"Turck"|"Kyle"||1
+"USA"|"BAYLOR-UNIV"|"Yes"|"Wu"|"Zhenbin"||1
+"USA"|"BOSTON-UNIV"|"Yes"|"Avetisyan"|"Aram"|1|1
+"USA"|"BOSTON-UNIV"|"Yes"|"Bose"|"Tulika"|1|1
+"USA"|"BOSTON-UNIV"|"Yes"|"Carrera Jarrin"|"Edgar"||1
+"USA"|"BOSTON-UNIV"|"Yes"|"Fantasia"|"Cory"||1
+"USA"|"BOSTON-UNIV"|"Yes"|"García Vera"|"Miguel Francisco"||
+"USA"|"BOSTON-UNIV"|"Yes"|"Gastler"|"Daniel"||
+"USA"|"BOSTON-UNIV"|"Yes"|"Gorodetzky"|"Philippe"||
+"USA"|"BOSTON-UNIV"|"Yes"|"Gusev"|"Yuri"||
+"USA"|"BOSTON-UNIV"|"Yes"|"Heister"|"Arno"||
+"USA"|"BOSTON-UNIV"|"Yes"|"Lawson"|"Philip"||
+"USA"|"BOSTON-UNIV"|"Yes"|"Lazic"|"Dragoslav"||
+"USA"|"BOSTON-UNIV"|"Yes"|"Rankin"|"Dylan"||1
+"USA"|"BOSTON-UNIV"|"Yes"|"Richardson"|"Clint"||1
+"USA"|"BOSTON-UNIV"|"Yes"|"Rohlf"|"James"||
+"USA"|"BOSTON-UNIV"|"Yes"|"Sperka"|"David"||1
+"USA"|"BOSTON-UNIV"|"Yes"|"St. John"|"Jason"||1
+"USA"|"BOSTON-UNIV"|"No"|"St. John"|"Jason"||1
+"USA"|"BOSTON-UNIV"|"Yes"|"Sulak"|"Lawrence"||
+"USA"|"BOSTON-UNIV"|"Yes"|"Zou"|"David"||
+"USA"|"BROWN-UNIV"|"Yes"|"Alimena"|"Juliette"||
+"USA"|"BROWN-UNIV"|"Yes"|"Bhattacharya"|"Saptaparna"||1
+"USA"|"BROWN-UNIV"|"Yes"|"Christopher"|"Grant"||
+"USA"|"BROWN-UNIV"|"Yes"|"Cutts"|"David"||
+"USA"|"BROWN-UNIV"|"Yes"|"Demiragli"|"Zeynep"||
+"USA"|"BROWN-UNIV"|"Yes"|"Ferapontov"|"Alexey"|1|1
+"USA"|"BROWN-UNIV"|"Yes"|"Garabedian"|"Alex"||1
+"USA"|"BROWN-UNIV"|"Yes"|"Heintz"|"Ulrich"||1
+"USA"|"BROWN-UNIV"|"No"|"Jabeen"|"Shabnam"|1|1
+"USA"|"BROWN-UNIV"|"No"|"Kukartsev"|"Gennadiy"|1|1
+"USA"|"BROWN-UNIV"|"Yes"|"Laird"|"Edward"||
+"USA"|"BROWN-UNIV"|"Yes"|"Landsberg"|"Greg"|1|1
+"USA"|"BROWN-UNIV"|"No"|"Luk"|"Michael"||1
+"USA"|"BROWN-UNIV"|"Yes"|"Mao"|"Zaixing"||
+"USA"|"BROWN-UNIV"|"Yes"|"Narain"|"Meenakshi"|1|1
+"USA"|"BROWN-UNIV"|"Yes"|"Rosenfield"|"Matt"||
+"USA"|"BROWN-UNIV"|"Yes"|"Sinthuprasith"|"Tutanon"||1
+"USA"|"BROWN-UNIV"|"Yes"|"Sirisky"|"Stephen"||
+"USA"|"BROWN-UNIV"|"Yes"|"Speer"|"Thomas"||1
+"USA"|"BROWN-UNIV"|"Yes"|"Swanson"|"Joshua"||
+"USA"|"CALTECH"|"Yes"|"Anderson"|"Dustin"||1
+"USA"|"CALTECH"|"Yes"|"Apresyan"|"Artur"|1|1
+"USA"|"CALTECH"|"Yes"|"Bi"|"Feng"||
+"USA"|"CALTECH"|"Yes"|"Bornheim"|"Adolf"||1
+"USA"|"CALTECH"|"Yes"|"Chen"|"Yi"||1
+"USA"|"CALTECH"|"Yes"|"Di Marco"|"Emanuele"||1
+"USA"|"CALTECH"|"Yes"|"Du"|"Song Ming"||
+"USA"|"CALTECH"|"Yes"|"Duarte"|"Javier"||1
+"USA"|"CALTECH"|"Yes"|"Kcira"|"Dorian"||1
+"USA"|"CALTECH"|"Yes"|"Litvine"|"Vladimir"||
+"USA"|"CALTECH"|"Yes"|"Mott"|"Alexander"||1
+"USA"|"CALTECH"|"Yes"|"Newman"|"Harvey B."||1
+"USA"|"CALTECH"|"Yes"|"Pena"|"Cristian"||1
+"USA"|"CALTECH"|"No"|"Rogan"|"Christopher"||1
+"USA"|"CALTECH"|"Yes"|"Spiropulu"|"Maria"||1
+"USA"|"CALTECH"|"Yes"|"Xie"|"Si"||1
+"USA"|"CALTECH"|"Yes"|"Zhu"|"Ren-Yuan"||
+"USA"|"CARNEGIE-MELLON"|"Yes"|"Azzolini"|"Virginia"||1
+"USA"|"CARNEGIE-MELLON"|"Yes"|"Calamba"|"Aristotle"||1
+"USA"|"CARNEGIE-MELLON"|"Yes"|"Carlson"|"Benjamin"||1
+"USA"|"CARNEGIE-MELLON"|"Yes"|"Ferguson"|"Thomas"||
+"USA"|"CARNEGIE-MELLON"|"Yes"|"Iiyama"|"Yutaro"||1
+"USA"|"CARNEGIE-MELLON"|"No"|"Jang"|"Dong Wook"||1
+"USA"|"CARNEGIE-MELLON"|"Yes"|"Paulini"|"Manfred"|1|1
+"USA"|"CARNEGIE-MELLON"|"Yes"|"Russ"|"James"||1
+"USA"|"CARNEGIE-MELLON"|"Yes"|"Sun"|"Menglei"||1
+"USA"|"CARNEGIE-MELLON"|"Yes"|"Terentyev"|"Nikolay"||1
+"USA"|"CARNEGIE-MELLON"|"Yes"|"Vogel"|"Helmut"||
+"USA"|"CARNEGIE-MELLON"|"Yes"|"Vorobiev"|"Igor"||
+"USA"|"CHICAGO"|"No"|"Adams"|"Mark Raymond"||1
+"USA"|"CHICAGO"|"Yes"|"Apanasevich"|"Leonard"||1
+"USA"|"CHICAGO"|"No"|"Bazterra"|"Victor Eduardo"||1
+"USA"|"CHICAGO"|"Yes"|"Berry"|"Douglas"||1
+"USA"|"CHICAGO"|"Yes"|"Betts"|"Russell Richard"||
+"USA"|"CHICAGO"|"Yes"|"Bucinskaite"|"Inga"||1
+"USA"|"CHICAGO"|"Yes"|"Cavanaugh"|"Richard"||1
+"USA"|"CHICAGO"|"Yes"|"Evdokimov"|"Olga"||
+"USA"|"CHICAGO"|"Yes"|"Gauthier"|"Lucie"||1
+"USA"|"CHICAGO"|"Yes"|"Gerber"|"Cecilia Elena"||1
+"USA"|"CHICAGO"|"Yes"|"Hofman"|"David Jonathan"||
+"USA"|"CHICAGO"|"No"|"Khalatyan"|"Samvel"||1
+"USA"|"CHICAGO"|"Yes"|"Kurt"|"Pelin"||
+"USA"|"CHICAGO"|"Yes"|"Moon"|"Dong Ho"||
+"USA"|"CHICAGO"|"Yes"|"O'Brien"|"Christine"||
+"USA"|"CHICAGO"|"Yes"|"Sandoval Gonzalez"|"Irving Daniel"||1
+"USA"|"CHICAGO"|"Yes"|"Silkworth"|"Christopher"||1
+"USA"|"CHICAGO"|"Yes"|"Turner"|"Paul"||1
+"USA"|"CHICAGO"|"Yes"|"Varelas"|"Nikos"|1|1
+"USA"|"COLORADO"|"Yes"|"Cumalat"|"John Perry"||1
+"USA"|"COLORADO"|"Yes"|"Drell"|"Brian Robert"||
+"USA"|"COLORADO"|"Yes"|"Ford"|"William T."||
+"USA"|"COLORADO"|"Yes"|"Gaz"|"Alessandro"||1
+"USA"|"COLORADO"|"Yes"|"Jensen"|"Frank"||
+"USA"|"COLORADO"|"Yes"|"Johnson"|"Andrew"||
+"USA"|"COLORADO"|"Yes"|"Krohn"|"Michael"||
+"USA"|"COLORADO"|"Yes"|"Luiggi Lopez"|"Eduardo"||
+"USA"|"COLORADO"|"Yes"|"Mulholland"|"Troy"||
+"USA"|"COLORADO"|"Yes"|"Stenson"|"Kevin"|1|1
+"USA"|"COLORADO"|"Yes"|"Ulmer"|"Keith"|1|1
+"USA"|"COLORADO"|"Yes"|"Wagner"|"Stephen Robert"||1
+"USA"|"CORNELL"|"Yes"|"Alexander"|"James"||
+"USA"|"CORNELL"|"Yes"|"Badman"|"Ryan"||
+"USA"|"CORNELL"|"Yes"|"Bellis"|"Matthew"||
+"USA"|"CORNELL"|"Yes"|"Chatterjee"|"Avishek"||
+"USA"|"CORNELL"|"Yes"|"Chaves"|"Jorge"||
+"USA"|"CORNELL"|"Yes"|"Chu"|"Jennifer"||
+"USA"|"CORNELL"|"Yes"|"Dittmer"|"Susan"||
+"USA"|"CORNELL"|"Yes"|"Eggert"|"Nicholas"||
+"USA"|"CORNELL"|"Yes"|"Gibbons"|"Lawrence Kent"||
+"USA"|"CORNELL"|"Yes"|"Heltsley"|"Brian"||
+"USA"|"CORNELL"|"Yes"|"Mcdermott"|"Kevin"||
+"USA"|"CORNELL"|"Yes"|"Mirman"|"Nathan"||
+"USA"|"CORNELL"|"Yes"|"Nicolas Kaufman"|"Gala"||
+"USA"|"CORNELL"|"Yes"|"Patterson"|"Juliet Ritchie"||
+"USA"|"CORNELL"|"Yes"|"Poprocki"|"Stephen"||
+"USA"|"CORNELL"|"Yes"|"Ryd"|"Anders"||
+"USA"|"CORNELL"|"Yes"|"Salvati"|"Emmanuele"||
+"USA"|"CORNELL"|"Yes"|"Skinnari"|"Louise"||
+"USA"|"CORNELL"|"Yes"|"Sun"|"Werner"||
+"USA"|"CORNELL"|"Yes"|"Sweigart"|"David"||
+"USA"|"CORNELL"|"Yes"|"Tan"|"Shao Min"||
+"USA"|"CORNELL"|"Yes"|"Tao"|"Zhengcheng"||
+"USA"|"CORNELL"|"Yes"|"Teo"|"Wee Don"||
+"USA"|"CORNELL"|"Yes"|"Thom"|"Julia"||
+"USA"|"CORNELL"|"Yes"|"Thompson"|"Joshua"||
+"USA"|"CORNELL"|"Yes"|"Tucker"|"Jordan"||
+"USA"|"CORNELL"|"Yes"|"Weng"|"Yao"||
+"USA"|"CORNELL"|"Yes"|"Winstrom"|"Lucas"||
+"USA"|"CORNELL"|"Yes"|"Wittich"|"Peter"|1|1
+"USA"|"FAIRFIELD"|"Yes"|"Biselli"|"Angela"||
+"USA"|"FAIRFIELD"|"Yes"|"Kuhn"|"Joachim"||
+"USA"|"FAIRFIELD"|"Yes"|"Winn"|"Dave"||
+"USA"|"FERMILAB"|"No"|"Abdullin"|"Salavat"||1
+"USA"|"FERMILAB"|"Yes"|"Albrow"|"Michael"||1
+"USA"|"FERMILAB"|"Yes"|"Anderson"|"Jacob"|1|1
+"USA"|"FERMILAB"|"Yes"|"Apollinari"|"Giorgio"||
+"USA"|"FERMILAB"|"No"|"Badgett"|"William"||1
+"USA"|"FERMILAB"|"Yes"|"Bauerdick"|"Lothar A.T."||1
+"USA"|"FERMILAB"|"No"|"Beretvas"|"Andrew"||1
+"USA"|"FERMILAB"|"Yes"|"Berryhill"|"Jeffrey"||1
+"USA"|"FERMILAB"|"Yes"|"Bhat"|"Pushpalatha C."||1
+"USA"|"FERMILAB"|"Yes"|"Burkett"|"Kevin"||1
+"USA"|"FERMILAB"|"Yes"|"Butler"|"Joel Nathan"||1
+"USA"|"FERMILAB"|"Yes"|"Chetluru"|"Vasundhara"|1|1
+"USA"|"FERMILAB"|"No"|"Chetluru"|"Vasundhara"||1
+"USA"|"FERMILAB"|"Yes"|"Cheung"|"Harry"||1
+"USA"|"FERMILAB"|"Yes"|"Chlebana"|"Frank"||1
+"USA"|"FERMILAB"|"Yes"|"Christian"|"David"||
+"USA"|"FERMILAB"|"Yes"|"Cooper"|"William"||
+"USA"|"FERMILAB"|"Yes"|"Culbertson"|"Ray"||
+"USA"|"FERMILAB"|"Yes"|"Datta"|"Mousumi"||
+"USA"|"FERMILAB"|"Yes"|"Denisov"|"Dmitri"||
+"USA"|"FERMILAB"|"No"|"Deptuch"|"Grzegorz"||1
+"USA"|"FERMILAB"|"Yes"|"Elvira"|"Victor Daniel"||1
+"USA"|"FERMILAB"|"Yes"|"Esen"|"Selda"||1
+"USA"|"FERMILAB"|"Yes"|"Fischler"|"Mark"||
+"USA"|"FERMILAB"|"Yes"|"Freeman"|"Jim"||1
+"USA"|"FERMILAB"|"Yes"|"Gaines"|"Irwin"||
+"USA"|"FERMILAB"|"Yes"|"Gao"|"Yanyan"||1
+"USA"|"FERMILAB"|"Yes"|"Glenzinski"|"Douglas A."||
+"USA"|"FERMILAB"|"Yes"|"Golossanov"|"Alexander"||
+"USA"|"FERMILAB"|"Yes"|"Gottschalk"|"Erik"||
+"USA"|"FERMILAB"|"Yes"|"Gray"|"Lindsey"||1
+"USA"|"FERMILAB"|"No"|"Green"|"Dan"||1
+"USA"|"FERMILAB"|"Yes"|"Grünendahl"|"Stefan"||
+"USA"|"FERMILAB"|"Yes"|"Gutsche"|"Oliver"||1
+"USA"|"FERMILAB"|"Yes"|"Hare"|"Daryl"||1
+"USA"|"FERMILAB"|"Yes"|"Harris"|"Robert M."||1
+"USA"|"FERMILAB"|"Yes"|"Hirschauer"|"James"|1|1
+"USA"|"FERMILAB"|"No"|"Holzman"|"Burt"||1
+"USA"|"FERMILAB"|"Yes"|"Hooberman"|"Benjamin"|1|1
+"USA"|"FERMILAB"|"Yes"|"Hufnagel"|"Dirk"||
+"USA"|"FERMILAB"|"Yes"|"James"|"Eric"||
+"USA"|"FERMILAB"|"Yes"|"Jindariani"|"Sergo"||1
+"USA"|"FERMILAB"|"Yes"|"Joshi"|"Umesh"||
+"USA"|"FERMILAB"|"Yes"|"Jung"|"Andreas Werner"||
+"USA"|"FERMILAB"|"Yes"|"Kaadze"|"Ketino"||1
+"USA"|"FERMILAB"|"Yes"|"Kasturi"|"Santanam"||
+"USA"|"FERMILAB"|"Yes"|"Klima"|"Boaz"||1
+"USA"|"FERMILAB"|"No"|"Knopf"|"Walter"||1
+"USA"|"FERMILAB"|"Yes"|"Kreis"|"Benjamin"||1
+"USA"|"FERMILAB"|"Yes"|"Kwan"|"Simon"||1
+"USA"|"FERMILAB"|"Yes"|"Lammel"|"Stephan"||
+"USA"|"FERMILAB"|"No"|"Leonidopoulos"|"Christos"|1|1
+"USA"|"FERMILAB"|"Yes"|"Linacre"|"Jacob"||1
+"USA"|"FERMILAB"|"Yes"|"Lincoln"|"Don"||1
+"USA"|"FERMILAB"|"Yes"|"Lipton"|"Ron"||
+"USA"|"FERMILAB"|"Yes"|"Liu"|"Tiehui"||
+"USA"|"FERMILAB"|"Yes"|"Lopes De Sá"|"Rafael"||1
+"USA"|"FERMILAB"|"Yes"|"Lykken"|"Joseph"||1
+"USA"|"FERMILAB"|"Yes"|"Maeshima"|"Kaori"||1
+"USA"|"FERMILAB"|"Yes"|"Martinez Outschoorn"|"Verena Ingrid"||1
+"USA"|"FERMILAB"|"Yes"|"Maruyama"|"Sho"||1
+"USA"|"FERMILAB"|"Yes"|"Mason"|"David"||1
+"USA"|"FERMILAB"|"Yes"|"McBride"|"Patricia"||
+"USA"|"FERMILAB"|"Yes"|"McCauley"|"Thomas"||
+"USA"|"FERMILAB"|"Yes"|"Miao"|"Ting"||
+"USA"|"FERMILAB"|"Yes"|"Mishra"|"Kalanand"|1|1
+"USA"|"FERMILAB"|"Yes"|"Mokhov"|"Nikolai"||
+"USA"|"FERMILAB"|"Yes"|"Mrenna"|"Stephen"||1
+"USA"|"FERMILAB"|"Yes"|"Musienko"|"Yuri"||
+"USA"|"FERMILAB"|"Yes"|"Nahn"|"Steve"||
+"USA"|"FERMILAB"|"Yes"|"Newman-Holmes"|"Catherine"||
+"USA"|"FERMILAB"|"Yes"|"O'Dell"|"Vivian"||
+"USA"|"FERMILAB"|"Yes"|"Patrick"|"James"||
+"USA"|"FERMILAB"|"Yes"|"Pivarski"|"James"||
+"USA"|"FERMILAB"|"Yes"|"Popescu"|"Sorina"||
+"USA"|"FERMILAB"|"Yes"|"Prokofyev"|"Oleg"||
+"USA"|"FERMILAB"|"Yes"|"Ronzhin"|"Anatoly"||
+"USA"|"FERMILAB"|"Yes"|"Roser"|"Robert"||
+"USA"|"FERMILAB"|"Yes"|"Rubinov"|"Paul"||
+"USA"|"FERMILAB"|"Yes"|"Sexton-Kennedy"|"Elizabeth"||1
+"USA"|"FERMILAB"|"Yes"|"Sharma"|"Seema"|1|1
+"USA"|"FERMILAB"|"No"|"Soha"|"Aron"||1
+"USA"|"FERMILAB"|"Yes"|"Spalding"|"William J."||
+"USA"|"FERMILAB"|"Yes"|"Spiegel"|"Leonard"||1
+"USA"|"FERMILAB"|"Yes"|"Strologas"|"John"||
+"USA"|"FERMILAB"|"Yes"|"Taylor"|"Lucas"||
+"USA"|"FERMILAB"|"Yes"|"Tkaczyk"|"Slawek"||1
+"USA"|"FERMILAB"|"Yes"|"Tran"|"Nhan Viet"|1|1
+"USA"|"FERMILAB"|"Yes"|"Uplegger"|"Lorenzo"||1
+"USA"|"FERMILAB"|"Yes"|"Vaandering"|"Eric Wayne"||1
+"USA"|"FERMILAB"|"Yes"|"Verzocchi"|"Marco"||
+"USA"|"FERMILAB"|"Yes"|"Vidal"|"Richard"||
+"USA"|"FERMILAB"|"Yes"|"Wester"|"William"||
+"USA"|"FERMILAB"|"Yes"|"Whitbeck"|"Andrew"||1
+"USA"|"FERMILAB"|"Yes"|"White"|"Sebastian"||
+"USA"|"FERMILAB"|"Yes"|"Whitmore"|"Juliana"||1
+"USA"|"FERMILAB"|"Yes"|"Yang"|"Fan"||1
+"USA"|"FERMILAB"|"Yes"|"Yarba"|"Victor"||
+"USA"|"FERMILAB"|"Yes"|"Yin"|"Hang"||
+"USA"|"FLORIDA-FIU"|"Yes"|"Hewamanage"|"Samantha"||1
+"USA"|"FLORIDA-FIU"|"Yes"|"Joshi"|"Yagya Raj"||
+"USA"|"FLORIDA-FIU"|"Yes"|"Linn"|"Stephan"||
+"USA"|"FLORIDA-FIU"|"Yes"|"Markowitz"|"Pete"||1
+"USA"|"FLORIDA-FIU"|"Yes"|"Martinez"|"German"||
+"USA"|"FLORIDA-FIU"|"Yes"|"Rodriguez"|"Jorge Luis"||1
+"USA"|"FLORIDA-FIU"|"Yes"|"Stewart"|"Sean"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Ackert"|"Andrew"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Adams"|"Jordon Rowe"||1
+"USA"|"FLORIDA-STATE"|"Yes"|"Adams"|"Todd"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Askew"|"Andrew"|1|1
+"USA"|"FLORIDA-STATE"|"Yes"|"Bandurin"|"Dmitry"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Bein"|"Samuel"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Bochenek"|"Joseph"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Chen"|"Jie"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Diamond"|"Brendan"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Haas"|"Jeff"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Jenkins"|"Merrill"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Johnson"|"Kurtis F."||
+"USA"|"FLORIDA-STATE"|"Yes"|"Khatiwada"|"Ajeeta"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Lazarou"|"Dimitrios"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Myers"|"Gregory"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Prosper"|"Harrison"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Santra"|"Arka"||1
+"USA"|"FLORIDA-STATE"|"Yes"|"Tentindo"|"Silvia"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Veeraraghavan"|"Venkatesh"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Wahl"|"Horst"||
+"USA"|"FLORIDA-STATE"|"Yes"|"Weinberg"|"Marc"|1|1
+"USA"|"FLORIDA-TECH"|"Yes"|"Baarmand"|"Marc M."||
+"USA"|"FLORIDA-TECH"|"Yes"|"Bhopatkar"|"Vallary"||
+"USA"|"FLORIDA-TECH"|"Yes"|"Hernandez Rojas"|"Hector"||
+"USA"|"FLORIDA-TECH"|"Yes"|"Hohlmann"|"Marcus"||
+"USA"|"FLORIDA-TECH"|"Yes"|"Izzi"|"Cameron"||
+"USA"|"FLORIDA-TECH"|"Yes"|"Kalakhety"|"Himali"||
+"USA"|"FLORIDA-TECH"|"Yes"|"Mohapatra"|"Ankit"||
+"USA"|"FLORIDA-TECH"|"Yes"|"Oliver"|"Aiken"||
+"USA"|"FLORIDA-TECH"|"Yes"|"Roy"|"Titas"||1
+"USA"|"FLORIDA-TECH"|"No"|"Vega Acosta"|"Cristian"||1
+"USA"|"FLORIDA-TECH"|"Yes"|"Vodopiyanov"|"Igor"||1
+"USA"|"FLORIDA-TECH"|"Yes"|"Xu"|"Shiyuan"||
+"USA"|"FLORIDA-TECH"|"Yes"|"Yumiceva"|"Francisco"|1|1
+"USA"|"FLORIDA-UNIV"|"Yes"|"Acosta"|"Darin"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Avery"|"Paul"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Bourilkov"|"Dimitri"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Carnes"|"Andrew"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Carver"|"Matthew"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Cheng"|"Tongguang"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Curry"|"David"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Das"|"Souvik"|1|1
+"USA"|"FLORIDA-UNIV"|"Yes"|"De Gruttola"|"Michele"|1|1
+"USA"|"FLORIDA-UNIV"|"Yes"|"Di Giovanni"|"Gian Piero"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Field"|"Richard D."||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Fisher"|"Matthew"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Fu"|"Yu"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Furic"|"Ivan-Kresimir"||1
+"USA"|"FLORIDA-UNIV"|"Yes"|"Gainer"|"James"||1
+"USA"|"FLORIDA-UNIV"|"Yes"|"Hugon"|"Justin"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Kim"|"Bockjoo"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Klimenko"|"Sergey"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Konigsberg"|"Jacobo"|1|1
+"USA"|"FLORIDA-UNIV"|"Yes"|"Korytov"|"Andrey"||
+"USA"|"FLORIDA-UNIV"|"No"|"Kypreos"|"Theodore"||1
+"USA"|"FLORIDA-UNIV"|"Yes"|"Low"|"Jia Fu"||1
+"USA"|"FLORIDA-UNIV"|"Yes"|"Ma"|"Peisen"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Matchev"|"Konstantin"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Mei"|"Hualin"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Milenovic"|"Predrag"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Mitselmakher"|"Guenakh"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Muniz"|"Lana"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Ramond"|"Pierre"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Rank"|"Douglas"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Rinkevicius"|"Aurelijus"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Scurlock"|"Bobby"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Shchutska"|"Lesya"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Skhirtladze"|"Nikoloz"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Snowball"|"Matthew"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Wang"|"Sean-jiun"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Yelton"|"John"||
+"USA"|"FLORIDA-UNIV"|"Yes"|"Zakaria"|"Mohammed"||
+"USA"|"IOWA"|"Yes"|"Akgun"|"Ugur"||1
+"USA"|"IOWA"|"Yes"|"Albayrak"|"Elif Asli"||1
+"USA"|"IOWA"|"Yes"|"Bilki"|"Burak"||1
+"USA"|"IOWA"|"Yes"|"Clarida"|"Warren"||1
+"USA"|"IOWA"|"Yes"|"Dilsiz"|"Kamuran"||1
+"USA"|"IOWA"|"Yes"|"Durgut"|"Süleyman"||1
+"USA"|"IOWA"|"Yes"|"Gandrajula"|"Reddy Pratap"||1
+"USA"|"IOWA"|"Yes"|"George"|"Nigel"||
+"USA"|"IOWA"|"Yes"|"Haytmyradov"|"Maksat"||1
+"USA"|"IOWA"|"Yes"|"Ingram"|"F Duane"||
+"USA"|"IOWA"|"Yes"|"Khristenko"|"Viktor"||1
+"USA"|"IOWA"|"Yes"|"Merlo"|"Jean-Pierre"||
+"USA"|"IOWA"|"Yes"|"Mermerkaya/td>"|"Hamit"||1
+"USA"|"IOWA"|"Yes"|"Mestvirishvili"|"Alexi"||
+"USA"|"IOWA"|"Yes"|"Moeller"|"Anthony"||1
+"USA"|"IOWA"|"Yes"|"Nachtman"|"Jane"||1
+"USA"|"IOWA"|"Yes"|"Norbeck"|"Edwin"||
+"USA"|"IOWA"|"Yes"|"Ogul"|"Hasan"||1
+"USA"|"IOWA"|"Yes"|"Onel"|"Yasar"||1
+"USA"|"IOWA"|"Yes"|"Ozok"|"Ferhat"||
+"USA"|"IOWA"|"Yes"|"Rahmat"|"Rahmat"||1
+"USA"|"IOWA"|"Yes"|"Repond"|"José"||
+"USA"|"IOWA"|"Yes"|"Sen"|"Sercan"||1
+"USA"|"IOWA"|"Yes"|"Snyder"|"Christina"||1
+"USA"|"IOWA"|"Yes"|"Tan"|"Ping"||1
+"USA"|"IOWA"|"Yes"|"Tiras"|"Emrah"||1
+"USA"|"IOWA"|"Yes"|"Wetzel"|"James"||1
+"USA"|"IOWA"|"Yes"|"Yetkin"|"Taylan"||1
+"USA"|"IOWA"|"Yes"|"Yi"|"Kai"|1|1
+"USA"|"JOHNS-HOPKINS"|"Yes"|"Anderson"|"Ian"||1
+"USA"|"JOHNS-HOPKINS"|"Yes"|"Barnett"|"Bruce Arnold"||1
+"USA"|"JOHNS-HOPKINS"|"Yes"|"Blumenfeld"|"Barry"||1
+"USA"|"JOHNS-HOPKINS"|"Yes"|"Bolognesi"|"Sara"|1|1
+"USa"|"JOHNS-HOPKINS"|"Yes"|"Eminizer"|"Nicholas"||1
+"USA"|"JOHNS-HOPKINS"|"Yes"|"Fehling"|"David"||1
+"USA"|"JOHNS-HOPKINS"|"Yes"|"Feng"|"Lei"||1
+"USA"|"JOHNS-HOPKINS"|"Yes"|"Gritsan"|"Andrei"|1|1
+"USA"|"JOHNS-HOPKINS"|"Yes"|"Maksimovic"|"Petar"||1
+"USA"|"JOHNS-HOPKINS"|"Yes"|"Martin"|"Christopher"||1
+"USA"|"JOHNS-HOPKINS"|"Yes"|"Nash"|"Kevin"||1
+"USA"|"JOHNS-HOPKINS"|"Yes"|"Osherson"|"Marc"||1
+"USA"|"JOHNS-HOPKINS"|"Yes"|"Sady"|"Alice"||1
+"USA"|"JOHNS-HOPKINS"|"Yes"|"Swartz"|"Morris"||1
+"USA"|"JOHNS-HOPKINS"|"Yes"|"Xiao"|"Meng"||1
+"USA"|"JOHNS-HOPKINS"|"Yes"|"Xin"|"Yongjie"||1
+"USA"|"KANSAS-STATE"|"Yes"|"Bolton"|"Tim"||
+"USA"|"KANSAS-STATE"|"Yes"|"Chakaberia"|"Irakli"||1
+"USA"|"KANSAS-STATE"|"Yes"|"Ivanov"|"Andrew"|1|1
+"USA"|"KANSAS-STATE"|"Yes"|"Khalil"|"Sadia"|1|1
+"USA"|"KANSAS-STATE"|"Yes"|"Makouski"|"Mikhail"||1
+"USA"|"KANSAS-STATE"|"Yes"|"Maravin"|"Yurii"|1|1
+"USA"|"KANSAS-STATE"|"Yes"|"Roettger"|"Timothy"||
+"USA"|"KANSAS-STATE"|"Yes"|"Saini"|"Lovedeep Kaur"||1
+"USA"|"KANSAS-STATE"|"Yes"|"Svintradze"|"Irakli"||1
+"USA"|"KANSAS-STATE"|"Yes"|"Toda"|"Sachiko"||1
+"USA"|"KANSAS-UNIV"|"Yes"|"Al-bataineh"|"Ayman"||
+"USA"|"KANSAS-UNIV"|"Yes"|"Baringer"|"Philip"||
+"USA"|"KANSAS-UNIV"|"Yes"|"Bean"|"Alice"||
+"USA"|"KANSAS-UNIV"|"Yes"|"Benelli"|"Gabriele"||
+"USA"|"KANSAS-UNIV"|"Yes"|"Bowen"|"James"||
+"USA"|"KANSAS-UNIV"|"Yes"|"Bruner"|"Christopher"||
+"USA"|"KANSAS-UNIV"|"Yes"|"Castle"|"James"||
+"USA"|"KANSAS-UNIV"|"Yes"|"Gray"|"Julia"||
+"USA"|"KANSAS-UNIV"|"Yes"|"Kenny III"|"Raymond Patrick"||
+"USA"|"KANSAS-UNIV"|"Yes"|"Mcbrayer"|"William"||
+"USA"|"KANSAS-UNIV"|"Yes"|"Murray"|"Michael"||
+"USA"|"KANSAS-UNIV"|"Yes"|"Noonan"|"Daniel"||1
+"USA"|"KANSAS-UNIV"|"No"|"Noonan"|"Daniel"||1
+"USA"|"KANSAS-UNIV"|"Yes"|"Sanders"|"Stephen"||
+"USA"|"KANSAS-UNIV"|"Yes"|"Sekaric"|"Jadranka"||1
+"USA"|"KANSAS-UNIV"|"Yes"|"Stringer"|"Robert"||
+"USA"|"KANSAS-UNIV"|"Yes"|"Wang"|"Quan"||
+"USA"|"KANSAS-UNIV"|"Yes"|"Wilson"|"Graham"||
+"USA"|"KANSAS-UNIV"|"Yes"|"Wood"|"Jeffrey Scott"||
+"USA"|"LIVERMORE"|"Yes"|"Gronberg"|"Jeffrey"||
+"USA"|"LIVERMORE"|"Yes"|"Lange"|"David"||
+"USA"|"LIVERMORE"|"Yes"|"Rebassoo"|"Finn"||
+"USA"|"LIVERMORE"|"Yes"|"Wright"|"Douglas"||
+"USA"|"LOS_ALAMOS"|"No"|"Brooks"|"Melynda"||
+"USA"|"LOS_ALAMOS"|"No"|"Green"|"J. Andrew"||
+"USA"|"LOS_ALAMOS"|"No"|"Kapustinsky"|"Jon"||
+"USA"|"LOS_ALAMOS"|"No"|"Klein"|"Andreas"||
+"USA"|"LOS_ALAMOS"|"No"|"Leitch"|"Michael"||
+"USA"|"MARYLAND"|"Yes"|"Anelli"|"Christopher"||
+"USA"|"MARYLAND"|"Yes"|"Baden"|"Drew"||
+"USA"|"MARYLAND"|"Yes"|"Baron"|"Owen"||
+"USA"|"MARYLAND"|"Yes"|"Belloni"|"Alberto"||
+"USA"|"MARYLAND"|"Yes"|"Calvert"|"Brian"||
+"USA"|"MARYLAND"|"Yes"|"Eno"|"Sarah Catherine"||
+"USA"|"MARYLAND"|"Yes"|"Ferraioli"|"Charles"||
+"USA"|"MARYLAND"|"Yes"|"Gomez"|"Jaime"||1
+"USA"|"MARYLAND"|"Yes"|"Hadley"|"Nicholas John"||
+"USA"|"MARYLAND"|"Yes"|"Kellogg"|"Richard G."||
+"USA"|"MARYLAND"|"Yes"|"Kolberg"|"Ted"||
+"USA"|"MARYLAND"|"Yes"|"Kunkle"|"Joshua"||
+"USA"|"MARYLAND"|"Yes"|"Lu"|"Ying"||
+"USA"|"MARYLAND"|"Yes"|"Marionneau"|"Matthieu"||
+"USA"|"MARYLAND"|"Yes"|"Mignerey"|"Alice"||1
+"USA"|"MARYLAND"|"Yes"|"Pedro"|"Kevin"||1
+"USA"|"MARYLAND"|"No"|"Rossato"|"Kenneth"||1
+"USA"|"MARYLAND"|"Yes"|"Shin"|"Young Ho"||
+"USA"|"MARYLAND"|"Yes"|"Skuja"|"Andris"||
+"USA"|"MARYLAND"|"Yes"|"Tonjes"|"Marguerite"||
+"USA"|"MINNESOTA"|"Yes"|"Dahmes"|"Bryan"|1|1
+"USA"|"MINNESOTA"|"Yes"|"Finkel"|"Alexey"||
+"USA"|"MINNESOTA"|"Yes"|"Gude"|"Alexander"||1
+"USA"|"MINNESOTA"|"Yes"|"Hansen"|"Peter"||
+"USA"|"MINNESOTA"|"Yes"|"Kalafut"|"Sean"||1
+"USA"|"MINNESOTA"|"Yes"|"Kao"|"Shih-Chuan"||
+"USA"|"MINNESOTA"|"Yes"|"Kapusta"|"Joseph"||
+"USA"|"MINNESOTA"|"Yes"|"Klapoetke"|"Kevin"||
+"USA"|"MINNESOTA"|"Yes"|"Kubota"|"Yuichi"||
+"USA"|"MINNESOTA"|"Yes"|"Lesko"|"Zachary"||
+"USA"|"MINNESOTA"|"Yes"|"Mans"|"Jeremy"||
+"USA"|"MINNESOTA"|"Yes"|"Pastika"|"Nathaniel"||
+"USA"|"MINNESOTA"|"Yes"|"Ruckstuhl"|"Nicole"||
+"USA"|"MINNESOTA"|"Yes"|"Rusack"|"Roger"||
+"USA"|"MINNESOTA"|"Yes"|"Singovsky"|"Alexander"||
+"USA"|"MINNESOTA"|"Yes"|"Tambe"|"Norbert"||1
+"USA"|"MINNESOTA"|"Yes"|"Turkewitz"|"Jared"||
+"USA"|"MISSISSIPPI"|"Yes"|"Acosta"|"John Gabriel"||
+"USA"|"MISSISSIPPI"|"Yes"|"Cremaldi"|"Lucien Marcus"||1
+"USA"|"MISSISSIPPI"|"Yes"|"Godang"|"Romulus"||
+"USA"|"MISSISSIPPI"|"Yes"|"Kroeger"|"Rob"||1
+"USA"|"MISSISSIPPI"|"Yes"|"Oliveros"|"Sandra"||
+"USA"|"MISSISSIPPI"|"Yes"|"Perera"|"Lalith"||1
+"USA"|"MISSISSIPPI"|"Yes"|"Reidy"|"Jim"||
+"USA"|"MISSISSIPPI"|"Yes"|"Sanders"|"David A"||
+"USA"|"MISSISSIPPI"|"Yes"|"Summers"|"Don"||
+"USA"|"MIT"|"Yes"|"Apyan"|"Aram"||
+"USA"|"MIT"|"Yes"|"Barbieri"|"Richard"||
+"USA"|"MIT"|"Yes"|"Baty"|"Austin"||
+"USA"|"MIT"|"Yes"|"Bierwagen"|"Katharina"||
+"USA"|"MIT"|"Yes"|"Brandt"|"Stephanie"||
+"USA"|"MIT"|"Yes"|"Cali"|"Ivan Amos"||
+"USA"|"MIT"|"Yes"|"Di Matteo"|"Leonardo"||
+"USA"|"MIT"|"Yes"|"Dutta"|"Valentina"||
+"USA"|"MIT"|"Yes"|"Gomez Ceballos"|"Guillelmo"||
+"USA"|"MIT"|"Yes"|"Goncharov"|"Maxim"||
+"USA"|"MIT"|"Yes"|"Gulhan"|"Doga"||
+"USA"|"MIT"|"Yes"|"Innocenti"|"Gian Michele"||
+"USA"|"MIT"|"Yes"|"Klute"|"Markus"||
+"USA"|"MIT"|"Yes"|"Lai"|"Yue Shi"||
+"USA"|"MIT"|"Yes"|"Lee"|"Yen-Jie"||
+"USA"|"MIT"|"Yes"|"Levin"|"Andrew"||
+"USA"|"MIT"|"Yes"|"Mcginn"|"Christopher"||
+"USA"|"MIT"|"Yes"|"Niu"|"Xinmei"||
+"USA"|"MIT"|"Yes"|"Paus"|"Christoph"||
+"USA"|"MIT"|"Yes"|"Ralph"|"Duncan"||
+"USA"|"MIT"|"Yes"|"Roland"|"Christof"||
+"USA"|"MIT"|"Yes"|"Roland"|"Gunther"||
+"USA"|"MIT"|"Yes"|"Stephans"|"George"||
+"USA"|"MIT"|"Yes"|"Sumorok"|"Konstanty"||
+"USA"|"MIT"|"Yes"|"Varma"|"Mukund"||
+"USA"|"MIT"|"Yes"|"Velicanu"|"Dragos"||
+"USA"|"MIT"|"Yes"|"Veverka"|"Jan"||
+"USA"|"MIT"|"Yes"|"Wang"|"Jing"||
+"USA"|"MIT"|"Yes"|"Wang"|"Ta-Wei"||
+"USA"|"MIT"|"Yes"|"Wyslouch"|"Bolek"||
+"USA"|"MIT"|"Yes"|"Yang"|"Mingming"||
+"USA"|"MIT"|"Yes"|"Zanetti"|"Marco"||
+"USA"|"MIT"|"Yes"|"Zhukova"|"Victoria"||
+"USA"|"NEBRASKA"|"Yes"|"Avdeeva"|"Ekaterina"||1
+"USA"|"NEBRASKA"|"Yes"|"Barrefors"|"Björn"||
+"USA"|"NEBRASKA"|"Yes"|"Bloom"|"Kenneth"||1
+"USA"|"NEBRASKA"|"Yes"|"Bose"|"Suvadeep"||1
+"USA"|"NEBRASKA"|"Yes"|"Claes"|"Daniel R."||1
+"USA"|"NEBRASKA"|"Yes"|"Dominguez"|"Aaron"||1
+"USA"|"NEBRASKA"|"Yes"|"Gonzalez Suarez"|"Rebeca"||1
+"USA"|"NEBRASKA"|"Yes"|"Kamalieddin"|"Rami"||
+"USA"|"NEBRASKA"|"Yes"|"Keller"|"Jason"||
+"USA"|"NEBRASKA"|"Yes"|"Knowlton"|"Dan"||1
+"USA"|"NEBRASKA"|"Yes"|"Kravchenko"|"Ilya"||1
+"USA"|"NEBRASKA"|"Yes"|"Lazo-Flores"|"Jose"||
+"USA"|"NEBRASKA"|"Yes"|"Malik"|"Sudhir"||1
+"USA"|"NEBRASKA"|"Yes"|"Meier"|"Frank"||
+"USA"|"NEBRASKA"|"Yes"|"Monroy"|"Jose"||
+"USA"|"NEBRASKA"|"Yes"|"Snow"|"Gregory R."||1
+"USA"|"NORTHEASTERN"|"Yes"|"Alverson"|"George"||
+"USA"|"NORTHEASTERN"|"Yes"|"Barberis"|"Emanuela"||
+"USA"|"NORTHEASTERN"|"Yes"|"Baumgartel"|"Darin"||
+"USA"|"NORTHEASTERN"|"Yes"|"Chasco"|"Matthew"||
+"USA"|"NORTHEASTERN"|"Yes"|"Franke"|"Martin"||
+"USA"|"NORTHEASTERN"|"Yes"|"Massironi"|"Andrea"||1
+"USA"|"NORTHEASTERN"|"Yes"|"Morse"|"David Michael"||1
+"USA"|"NORTHEASTERN"|"Yes"|"Nash"|"David"||
+"USA"|"NORTHEASTERN"|"Yes"|"Orimoto"|"Toyoko"||
+"USA"|"NORTHEASTERN"|"Yes"|"Teixeira De Lima"|"Rafael"||
+"USA"|"NORTHEASTERN"|"Yes"|"Trocino"|"Daniele"||
+"USA"|"NORTHEASTERN"|"Yes"|"Wang"|"Ren-jie"||
+"USA"|"NORTHEASTERN"|"Yes"|"Wood"|"Darien"||
+"USA"|"NORTHEASTERN"|"Yes"|"Zhang"|"Jinzhong"||
+"USA"|"NORTHWESTERN"|"Yes"|"Anastassov"|"Anton"||1
+"USA"|"NORTHWESTERN"|"Yes"|"Gunter"|"Thoth"||
+"USA"|"NORTHWESTERN"|"Yes"|"Hahn"|"Kristan Allan"|1|1
+"USA"|"NORTHWESTERN"|"Yes"|"Kelly"|"Kevin"||1
+"USA"|"NORTHWESTERN"|"Yes"|"Kubik"|"Andrew"||
+"USA"|"NORTHWESTERN"|"Yes"|"Lusito"|"Letizia"||
+"USA"|"NORTHWESTERN"|"Yes"|"Mucia"|"Nicholas"||
+"USA"|"NORTHWESTERN"|"Yes"|"Odell"|"Nathaniel"||
+"USA"|"NORTHWESTERN"|"Yes"|"Pollack"|"Brian"||
+"USA"|"NORTHWESTERN"|"Yes"|"Pozdnyakov"|"Andrey"||
+"USA"|"NORTHWESTERN"|"Yes"|"Schmitt"|"Michael"||
+"USA"|"NORTHWESTERN"|"Yes"|"Stoynev"|"Stoyan"||
+"USA"|"NORTHWESTERN"|"Yes"|"Sung"|"Kevin"||
+"USA"|"NORTHWESTERN"|"Yes"|"Trovato"|"Marco"||
+"USA"|"NORTHWESTERN"|"Yes"|"Velasco"|"Mayda"||
+"USA"|"NORTHWESTERN"|"Yes"|"Won"|"Steven"||
+"USA"|"NOTRE_DAME"|"Yes"|"Brinkerhoff"|"Andrew"||
+"USA"|"NOTRE_DAME"|"Yes"|"Chan"|"Kwok Ming"||
+"USA"|"NOTRE_DAME"|"Yes"|"Dev"|"Nabarun"||
+"USA"|"NOTRE_DAME"|"Yes"|"Drozdetskiy"|"Alexey"||
+"USA"|"NOTRE_DAME"|"Yes"|"Hildreth"|"Michael"|1|1
+"USA"|"NOTRE_DAME"|"Yes"|"Jessop"|"Colin"||
+"USA"|"NOTRE_DAME"|"Yes"|"Karmgard"|"Daniel John"||
+"USA"|"NOTRE_DAME"|"Yes"|"Kellams"|"Nathan"||
+"USA"|"NOTRE_DAME"|"Yes"|"Kolb"|"Jeff"||
+"USA"|"NOTRE_DAME"|"Yes"|"Lannon"|"Kevin"||1
+"USA"|"NOTRE_DAME"|"Yes"|"Luo"|"Wuming"||1
+"USA"|"NOTRE_DAME"|"Yes"|"Lynch"|"Sean"||
+"USA"|"NOTRE_DAME"|"Yes"|"Marinelli"|"Nancy"||
+"USA"|"NOTRE_DAME"|"Yes"|"Meng"|"Fanbo"||
+"USA"|"NOTRE_DAME"|"Yes"|"Mueller"|"Charles"||
+"USA"|"NOTRE_DAME"|"Yes"|"Pearson"|"Tessa"||
+"USA"|"NOTRE_DAME"|"Yes"|"Planer"|"Michael"||
+"USA"|"NOTRE_DAME"|"Yes"|"Reinsvold"|"Allison"||
+"USA"|"NOTRE_DAME"|"Yes"|"Ruchti"|"Randy"||
+"USA"|"NOTRE_DAME"|"Yes"|"Slaunwhite"|"Jason"||1
+"USA"|"NOTRE_DAME"|"Yes"|"Suh"|"In-Saeng"||
+"USA"|"NOTRE_DAME"|"Yes"|"Valls"|"Nil"||
+"USA"|"NOTRE_DAME"|"Yes"|"Wayne"|"Mitchell"||
+"USA"|"NOTRE_DAME"|"Yes"|"Wolf"|"Matthias"||
+"USA"|"NOTRE_DAME"|"Yes"|"Woodard"|"Anna"||
+"USA"|"OHIO-STATE"|"Yes"|"Antonelli"|"Louis"||
+"USA"|"OHIO-STATE"|"Yes"|"Brinson"|"Jessica"||
+"USA"|"OHIO-STATE"|"Yes"|"Durkin"|"Lloyd Stanley"||
+"USA"|"OHIO-STATE"|"Yes"|"Flowers"|"Sean"||
+"USA"|"OHIO-STATE"|"Yes"|"Hart"|"Andrew"||
+"USA"|"OHIO-STATE"|"Yes"|"Hill"|"Christopher"||1
+"USA"|"OHIO-STATE"|"Yes"|"Hughes"|"Richard"||
+"USA"|"OHIO-STATE"|"Yes"|"Kotov"|"Khristian"||
+"USA"|"OHIO-STATE"|"Yes"|"Liu"|"Bingxuan"||
+"USA"|"OHIO-STATE"|"Yes"|"Puigh"|"Darren"||
+"USA"|"OHIO-STATE"|"Yes"|"Rodenburg"|"Marissa"||
+"USA"|"OHIO-STATE"|"Yes"|"Smith"|"Geoffrey"||
+"USA"|"OHIO-STATE"|"Yes"|"Vuosalo"|"Carl"||
+"USA"|"OHIO-STATE"|"Yes"|"Winer"|"Brian L."||
+"USA"|"OHIO-STATE"|"Yes"|"Wulsin"|"Howard Wells"||
+"USA"|"PRINCETON"|"Yes"|"Berry"|"Edmund"||
+"USA"|"PRINCETON"|"Yes"|"Driga"|"Olga"||
+"USA"|"PRINCETON"|"Yes"|"Elmer"|"Peter"||
+"USA"|"PRINCETON"|"Yes"|"Halyo"|"Valerie"||1
+"USA"|"PRINCETON"|"No"|"Hardenbrook"|"Joshua"||1
+"USA"|"PRINCETON"|"Yes"|"Hebda"|"Philip"||
+"USA"|"PRINCETON"|"Yes"|"Hunt"|"Adam"||
+"USA"|"PRINCETON"|"Yes"|"Jindal"|"Pratima"||1
+"USA"|"PRINCETON"|"Yes"|"Koay"|"Sue Ann"||
+"USA"|"PRINCETON"|"Yes"|"Lujan"|"Paul"||1
+"USA"|"PRINCETON"|"Yes"|"Marlow"|"Daniel"||
+"USA"|"PRINCETON"|"Yes"|"Medvedeva"|"Tatiana"||
+"USA"|"PRINCETON"|"Yes"|"Mooney"|"Michael"||
+"USA"|"PRINCETON"|"Yes"|"Olsen"|"James"|1|1
+"USA"|"PRINCETON"|"Yes"|"Quan"|"Xiaohang"||
+"USA"|"PRINCETON"|"Yes"|"Raval"|"Amita"||
+"USA"|"PRINCETON"|"Yes"|"Saka"|"Halil"||
+"USA"|"PRINCETON"|"Yes"|"Stickland"|"David"||
+"USA"|"PRINCETON"|"Yes"|"Tully"|"Christopher"||
+"USA"|"PRINCETON"|"Yes"|"Werner"|"Jeremy Scott"||1
+"USA"|"PRINCETON"|"Yes"|"Zenz"|"Seth Conrad"||
+"USA"|"PRINCETON"|"Yes"|"Zuranski"|"Andrzej"||
+"USA"|"PUERTO_RICO"|"Yes"|"Brownson"|"Eric"||1
+"USA"|"PUERTO_RICO"|"Yes"|"Lopez"|"Angel"||
+"USA"|"PUERTO_RICO"|"Yes"|"Mendez"|"Hector"||1
+"USA"|"PUERTO_RICO"|"Yes"|"Ramirez Vargas"|"Juan Eduardo"||
+"USA"|"PURDUE"|"Yes"|"Benedetti"|"Daniele"||
+"USA"|"PURDUE"|"Yes"|"Bortoletto"|"Daniela"||
+"USA"|"PURDUE"|"Yes"|"Bubna"|"Mayur"||
+"USA"|"PURDUE"|"Yes"|"Cervantes"|"Mayra"||
+"USA"|"PURDUE"|"Yes"|"De Mattia"|"Marco"||1
+"USA"|"PURDUE"|"No"|"Everett"|"Adam"|1|1
+"USA"|"PURDUE"|"Yes"|"Gutay"|"Laszlo"||
+"USA"|"PURDUE"|"Yes"|"Hu"|"Zhen"||1
+"USA"|"PURDUE"|"Yes"|"Jones"|"Matthew"||
+"USA"|"PURDUE"|"Yes"|"Jung"|"Kurt"||
+"USA"|"PURDUE"|"Yes"|"Kress"|"Matthew"||
+"USA"|"PURDUE"|"Yes"|"Krzywda"|"Alex"||
+"USA"|"PURDUE"|"Yes"|"Leonardo"|"Nuno"||1
+"USA"|"PURDUE"|"No"|"Lopes Pegna"|"David"|1|1
+"USA"|"PURDUE"|"Yes"|"Merkel"|"Petra"||
+"USA"|"PURDUE"|"Yes"|"Neumeister"|"Norbert"||
+"USA"|"PURDUE"|"Yes"|"Radburn-Smith"|"Benjamin Charles"||
+"USA"|"PURDUE"|"Yes"|"Shi"|"Xin"||
+"USA"|"PURDUE"|"Yes"|"Shipsey"|"Ian"||1
+"USA"|"PURDUE"|"Yes"|"Silvers"|"David"||1
+"USA"|"PURDUE"|"Yes"|"Sun"|"Jian"||
+"USA"|"PURDUE"|"Yes"|"Svyatkovskiy"|"Alexey"||
+"USA"|"PURDUE"|"Yes"|"Wang"|"Fuqiang"||
+"USA"|"PURDUE"|"Yes"|"Xie"|"Wei"||
+"USA"|"PURDUE"|"Yes"|"Xu"|"Lingshan"||
+"USA"|"PURDUE"|"Yes"|"Yoo"|"Hwi Dong"|1|1
+"USA"|"PURDUE"|"Yes"|"Zablocki"|"Jakub"||1
+"USA"|"PURDUE"|"Yes"|"Zhang"|"Qiang"||
+"USA"|"PURDUE"|"No"|"Zheng"|"Yu"||1
+"USA"|"PURDUE-CALUMET"|"Yes"|"Parashar"|"Neeti"||1
+"USA"|"PURDUE-CALUMET"|"Yes"|"Stupak"|"John"||1
+"USA"|"RICE"|"Yes"|"Adair"|"Antony"||
+"USA"|"RICE"|"Yes"|"Akgun"|"Bora"||
+"USA"|"RICE"|"Yes"|"Chen"|"Zhenyu"||
+"USA"|"RICE"|"Yes"|"Ecklund"|"Karl Matthew"||1
+"USA"|"RICE"|"Yes"|"Eppley"|"Geary"||
+"USA"|"RICE"|"Yes"|"Geurts"|"Frank J.M."||
+"USA"|"RICE"|"Yes"|"Guilbaud"|"Maxime"||
+"USA"|"RICE"|"Yes"|"Li"|"Wei"||
+"USA"|"RICE"|"Yes"|"Michlin"|"Benjamin"||
+"USA"|"RICE"|"Yes"|"Northup"|"Michael"||
+"USA"|"RICE"|"Yes"|"Padley"|"Brian Paul"||
+"USA"|"RICE"|"Yes"|"Redjimi"|"Radia"||
+"USA"|"RICE"|"Yes"|"Roberts"|"Jay"||
+"USA"|"RICE"|"Yes"|"Rorie"|"Jamal"||
+"USA"|"RICE"|"Yes"|"Tu"|"Zhoudunming"||
+"USA"|"RICE"|"Yes"|"Yepes"|"Pablo"||
+"USA"|"RICE"|"Yes"|"Zabel"|"James"||1
+"USA"|"ROCHESTER"|"Yes"|"Betchart"|"Burton"||
+"USA"|"ROCHESTER"|"Yes"|"Bodek"|"Arie"||
+"USA"|"ROCHESTER"|"Yes"|"Covarelli"|"Roberto"||
+"USA"|"ROCHESTER"|"Yes"|"Davydov"|"Mikhail"||
+"USA"|"ROCHESTER"|"Yes"|"de Barbaro"|"Pawel"||
+"USA"|"ROCHESTER"|"Yes"|"Demina"|"Regina"||
+"USA"|"ROCHESTER"|"Yes"|"Duh"|"Yi-ting"||
+"USA"|"ROCHESTER"|"Yes"|"Eshaq"|"Yossof"||
+"USA"|"ROCHESTER"|"Yes"|"Garcia-Bellido"|"Aran"||
+"USA"|"ROCHESTER"|"Yes"|"Goldenzweig"|"Pablo"||
+"USA"|"ROCHESTER"|"Yes"|"Han"|"Jiyeon"||1
+"USA"|"ROCHESTER"|"Yes"|"Harel"|"Amnon"||
+"USA"|"ROCHESTER"|"Yes"|"Khukhunaishvili"|"Aleko"||
+"USA"|"ROCHESTER"|"Yes"|"Lo"|"Kin Ho"||
+"USA"|"ROCHESTER"|"Yes"|"Melissinos"|"Adrian"||
+"USA"|"ROCHESTER"|"Yes"|"Petrillo"|"Gianluca"||
+"USA"|"ROCHESTER"|"Yes"|"Sakumoto"|"Willis"||
+"USA"|"ROCHESTER"|"Yes"|"Vishnevskiy"|"Dmitry"||
+"USA"|"ROCHESTER"|"Yes"|"Zielinski"|"Marek"||1
+"USA"|"ROCKEFELLER"|"Yes"|"Bhatti"|"Anwar"||1
+"USA"|"ROCKEFELLER"|"Yes"|"Ciesielski"|"Robert"||
+"USA"|"ROCKEFELLER"|"Yes"|"Demortier"|"Luc"||
+"USA"|"ROCKEFELLER"|"Yes"|"Goulianos"|"Konstantin"||
+"USA"|"ROCKEFELLER"|"No"|"Lungu"|"Gheorghe"|1|1
+"USA"|"ROCKEFELLER"|"No"|"Malik"|"Sarah"|1|1
+"USA"|"ROCKEFELLER"|"Yes"|"Mesropian"|"Christina"||
+"USA"|"RUTGERS"|"Yes"|"Arora"|"Sanjay"||1
+"USA"|"RUTGERS"|"Yes"|"Barker"|"Anthony"||1
+"USA"|"RUTGERS"|"Yes"|"Chou"|"John Paul"|1|1
+"USA"|"RUTGERS"|"Yes"|"Contreras-Campana"|"Christian"||
+"USA"|"RUTGERS"|"Yes"|"Contreras-Campana"|"Emmanuel"||1
+"USA"|"RUTGERS"|"Yes"|"Duggan"|"Daniel"||1
+"USA"|"RUTGERS"|"Yes"|"Feld"|"David"||
+"USA"|"RUTGERS"|"Yes"|"Ferencek"|"Dinko"||1
+"USA"|"RUTGERS"|"Yes"|"Gershtein"|"Yuri"|1|1
+"USA"|"RUTGERS"|"Yes"|"Gómez Espinosa"|"Tirso Alejandro"||1
+"USA"|"RUTGERS"|"Yes"|"Gray"|"Richard"||1
+"USA"|"RUTGERS"|"Yes"|"Halkiadakis"|"Eva"|1|1
+"USA"|"RUTGERS"|"Yes"|"Hidas"|"Dean"||1
+"USA"|"RUTGERS"|"Yes"|"Hughes"|"Elliot"||1
+"USA"|"RUTGERS"|"Yes"|"Kaplan"|"Steven"||1
+"USA"|"RUTGERS"|"Yes"|"Kunnawalkam Elayavalli"|"Raghav"||
+"USA"|"RUTGERS"|"Yes"|"Laflotte"|"Ian"||
+"USA"|"RUTGERS"|"Yes"|"Lath"|"Amitabh"||1
+"USA"|"RUTGERS"|"Yes"|"Panwalkar"|"Shruti"||
+"USA"|"RUTGERS"|"Yes"|"Park"|"Michael"||
+"USA"|"RUTGERS"|"Yes"|"Patel"|"Rishi"||1
+"USA"|"RUTGERS"|"Yes"|"Rekovic"|"Vladimir"||
+"USA"|"RUTGERS"|"Yes"|"Robles"|"Jorge"||
+"USA"|"RUTGERS"|"Yes"|"Salur"|"Sevil"||
+"USA"|"RUTGERS"|"Yes"|"Schnetzer"|"Steve"||
+"USA"|"RUTGERS"|"Yes"|"Seitz"|"Claudia"||1
+"USA"|"RUTGERS"|"Yes"|"Somalwar"|"Sunil"||1
+"USA"|"RUTGERS"|"Yes"|"Stone"|"Robert"||
+"USA"|"RUTGERS"|"Yes"|"Thomas"|"Scott"||
+"USA"|"RUTGERS"|"Yes"|"Thomassen"|"Peter"||
+"USA"|"RUTGERS"|"Yes"|"Walker"|"Matthew"||
+"USA"|"RUTGERS"|"Yes"|"Zywicki"|"Patrick"||1
+"USA"|"SUNY-BUFFALO"|"Yes"|"Alyari"|"Maral"||
+"USA"|"SUNY-BUFFALO"|"Yes"|"Dolen"|"James"|1|1
+"USA"|"SUNY-BUFFALO"|"Yes"|"George"|"Jimin"||1
+"USA"|"SUNY-BUFFALO"|"Yes"|"Godshalk"|"Andrew"||1
+"USA"|"SUNY-BUFFALO"|"Yes"|"Iashvili"|"Ia"||1
+"USA"|"SUNY-BUFFALO"|"Yes"|"Jain"|"Supriya"||1
+"USA"|"SUNY-BUFFALO"|"Yes"|"Kaisen"|"Josh"||1
+"USA"|"SUNY-BUFFALO"|"Yes"|"Kharchilava"|"Avto"||1
+"USA"|"SUNY-BUFFALO"|"No"|"Krylova"|"Kristina"||1
+"USA"|"SUNY-BUFFALO"|"Yes"|"Kumar"|"Ashish"||1
+"USA"|"SUNY-BUFFALO"|"Yes"|"Rappoccio"|"Salvatore"||1
+"USA"|"SUNY-BUFFALO"|"No"|"Wan"|"Zongru"||1
+"USA"|"TENNESSEE"|"Yes"|"Foerster"|"Mark"||
+"USA"|"TENNESSEE"|"Yes"|"Riley"|"Grant"||
+"USA"|"TENNESSEE"|"Yes"|"Rose"|"Keith"||1
+"USA"|"TENNESSEE"|"Yes"|"Spanier"|"Stefan"||1
+"USA"|"TENNESSEE"|"Yes"|"Yang"|"Zong-Chang"||1
+"USA"|"TENNESSEE"|"Yes"|"York"|"Andrew"||
+"USA"|"TEXAS-TAMU"|"Yes"|"Bouhali"|"Othmane"||
+"USA"|"TEXAS-TAMU"|"Yes"|"Castaneda Hernandez"|"Alfredo"||
+"USA"|"TEXAS-TAMU"|"Yes"|"Eusebi"|"Ricardo"||1
+"USA"|"TEXAS-TAMU"|"Yes"|"Flanagan"|"Will"||1
+"USA"|"TEXAS-TAMU"|"Yes"|"Kamon"|"Teruki"||1
+"USA"|"TEXAS-TAMU"|"Yes"|"Krutelyov"|"Vyacheslav"||
+"USA"|"TEXAS-TAMU"|"Yes"|"Maghrbi"|"Yasser"||
+"USA"|"TEXAS-TAMU"|"Yes"|"Montalvo"|"Roy"||1
+"USA"|"TEXAS-TAMU"|"Yes"|"Mueller"|"Ryan"||
+"USA"|"TEXAS-TAMU"|"No"|"Nguyen"|"Chi Nhan"||1
+"USA"|"TEXAS-TAMU"|"Yes"|"Osipenkov"|"Ilya"||1
+"USA"|"TEXAS-TAMU"|"Yes"|"Pakhotin"|"Yuriy"||
+"USA"|"TEXAS-TAMU"|"Yes"|"Perloff"|"Alexx"||1
+"USA"|"TEXAS-TAMU"|"Yes"|"Roe"|"Jeffrey"||
+"USA"|"TEXAS-TAMU"|"Yes"|"Rose"|"Anthony"||
+"USA"|"TEXAS-TAMU"|"Yes"|"Safonov"|"Alexei"||
+"USA"|"TEXAS-TAMU"|"Yes"|"Sakuma"|"Tai"||1
+"USA"|"TEXAS-TAMU"|"Yes"|"Suarez"|"Indara"||
+"USA"|"TEXAS-TAMU"|"Yes"|"Tatarinov"|"Aysen"||
+"USA"|"TEXAS-TECH"|"Yes"|"Akchurin"|"Nural"||1
+"USA"|"TEXAS-TECH"|"Yes"|"Cowden"|"Christopher"||1
+"USA"|"TEXAS-TECH"|"Yes"|"Damgov"|"Jordan"||1
+"USA"|"TEXAS-TECH"|"Yes"|"Dragoiu"|"Cosmin"||1
+"USA"|"TEXAS-TECH"|"Yes"|"Dudero"|"Phillip Russell"||1
+"USA"|"TEXAS-TECH"|"Yes"|"Faulkner"|"James"||1
+"USA"|"TEXAS-TECH"|"No"|"Jeong"|"Chiyoung"||1
+"USA"|"TEXAS-TECH"|"Yes"|"Kovitanggoon"|"Kittikul"||1
+"USA"|"TEXAS-TECH"|"Yes"|"Kunori"|"Shuichi"||1
+"USA"|"TEXAS-TECH"|"Yes"|"Lamichhane"|"Kamal"||
+"USA"|"TEXAS-TECH"|"Yes"|"Lee"|"Sung Won"||1
+"USA"|"TEXAS-TECH"|"Yes"|"Libeiro"|"Terence"||1
+"USA"|"TEXAS-TECH"|"Yes"|"Sill"|"Alan"||
+"USA"|"TEXAS-TECH"|"Yes"|"Undleeb"|"Sonaina"||1
+"USA"|"TEXAS-TECH"|"Yes"|"Volobouev"|"Igor"||1
+"USA"|"TEXAS-TECH"|"Yes"|"Wigmans"|"Richard"||
+"USA"|"UCDAVIS"|"Yes"|"Breedon"|"Richard"||
+"USA"|"UCDAVIS"|"Yes"|"Breto"|"Guillermo"||
+"USA"|"UCDAVIS"|"Yes"|"Burns"|"Dustin"||
+"USA"|"UCDAVIS"|"Yes"|"Calderon De La Barca Sanchez"|"Manuel"||
+"USA"|"UCDAVIS"|"Yes"|"Cebra"|"Daniel"||
+"USA"|"UCDAVIS"|"Yes"|"Chauhan"|"Sushil"||
+"USA"|"UCDAVIS"|"Yes"|"Chertok"|"Maxwell"||
+"USA"|"UCDAVIS"|"Yes"|"Conway"|"John"||
+"USA"|"UCDAVIS"|"Yes"|"Conway"|"Rylan"||
+"USA"|"UCDAVIS"|"Yes"|"Cox"|"Peter Timothy"||
+"USA"|"UCDAVIS"|"Yes"|"Erbacher"|"Robin"||
+"USA"|"UCDAVIS"|"Yes"|"Flores"|"Chad"||
+"USA"|"UCDAVIS"|"Yes"|"Gardner"|"Michael"||
+"USA"|"UCDAVIS"|"Yes"|"Gearhart"|"Joshua"||
+"USA"|"UCDAVIS"|"Yes"|"Gunion"|"Jack"||
+"USA"|"UCDAVIS"|"No"|"Kopecky"|"Alexandra"||1
+"USA"|"UCDAVIS"|"Yes"|"Mclean"|"Christine"||
+"USA"|"UCDAVIS"|"Yes"|"Mulhearn"|"Michael"||
+"USA"|"UCDAVIS"|"Yes"|"Pilot"|"Justin"||
+"USA"|"UCDAVIS"|"Yes"|"Ricci-Tam"|"Francesca"||
+"USA"|"UCDAVIS"|"Yes"|"Shalhout"|"Shalhout"||
+"USA"|"UCDAVIS"|"Yes"|"Smith"|"John"||
+"USA"|"UCDAVIS"|"Yes"|"Squires"|"Michael"||
+"USA"|"UCDAVIS"|"Yes"|"Stolp"|"Dustin"||
+"USA"|"UCDAVIS"|"Yes"|"Tos"|"Kyle"||
+"USA"|"UCDAVIS"|"Yes"|"Tripathi"|"Mani"||
+"USA"|"UCDAVIS"|"No"|"Vasquez Sierra"|"Ricardo"||1
+"USA"|"UCDAVIS"|"Yes"|"Vogt"|"Ramona"||
+"USA"|"UCDAVIS"|"Yes"|"Wilbur"|"Scott"||
+"USA"|"UCDAVIS"|"Yes"|"Yohay"|"Rachel"||
+"USA"|"UCLA"|"Yes"|"Andreev"|"Valeri"||
+"USA"|"UCLA"|"Yes"|"Arisaka"|"Katsushi"||
+"USA"|"UCLA"|"Yes"|"Bern"|"Zvi"||
+"USA"|"UCLA"|"Yes"|"Cline"|"David"||
+"USA"|"UCLA"|"Yes"|"Cousins"|"Robert"||
+"USA"|"UCLA"|"Yes"|"Erhan"|"Samim"||
+"USA"|"UCLA"|"Yes"|"Everaerts"|"Pieter"||1
+"USA"|"UCLA"|"Yes"|"Farrell"|"Chris"||1
+"USA"|"UCLA"|"Yes"|"Hauser"|"Jay"||
+"USA"|"UCLA"|"Yes"|"Ignatenko"|"Mikhail"||
+"USA"|"UCLA"|"Yes"|"Otwinowski"|"Stanislaw"||
+"USA"|"UCLA"|"No"|"Plager"|"Charles"||1
+"USA"|"UCLA"|"Yes"|"Rakness"|"Gregory"||
+"USA"|"UCLA"|"Yes"|"Saltzberg"|"David"||
+"USA"|"UCLA"|"Yes"|"Takasugi"|"Eric"||1
+"USA"|"UCLA"|"Yes"|"Valuev"|"Vyacheslav"||
+"USA"|"UCLA"|"Yes"|"Wang"|"Han-Guo"||
+"USA"|"UCLA"|"Yes"|"Weber"|"Matthias"||1
+"USA"|"UCRIVERSIDE"|"Yes"|"Burt"|"Kira"||1
+"USA"|"UCRIVERSIDE"|"Yes"|"Clare"|"Robert"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Ellison"|"John Anthony"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Gary"|"J William"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Hanson"|"Gail"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Heilman"|"Jesse"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Jandir"|"Pawandeep"||
+"USA"|"UCRIVERSIDE"|"No"|"Jeng"|"Geng-Yuan"||1
+"USA"|"UCRIVERSIDE"|"Yes"|"Kennedy"|"Elizabeth"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Lacroix"|"Florent"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Long"|"Owen Rosser"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Luthra"|"Arun"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Macintire"|"Doug"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Malberti"|"Martina"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Nguyen"|"Harold"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Olmedo Negrete"|"Manuel"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Seto"|"Richard"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Shrinivas"|"Amithabh"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Sumowidagdo"|"Suharyo"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Wei"|"Hua"||
+"USA"|"UCRIVERSIDE"|"Yes"|"Wimpenny"|"Stephen"||
+"USA"|"UCSB"|"Yes"|"Barge"|"Derek"||
+"USA"|"UCSB"|"Yes"|"Bhandari"|"Rohan"||
+"USA"|"UCSB"|"Yes"|"Bradmiller-Feld"|"John"||
+"USA"|"UCSB"|"Yes"|"Campagnari"|"Claudio"||1
+"USA"|"UCSB"|"Yes"|"Danielson"|"Thomas"||
+"USA"|"UCSB"|"Yes"|"Dishaw"|"Adam"||
+"USA"|"UCSB"|"Yes"|"Flowers"|"Kristen"||
+"USA"|"UCSB"|"Yes"|"Franco Sevilla"|"Manuel"||
+"USA"|"UCSB"|"Yes"|"Geffert"|"Paul"||
+"USA"|"UCSB"|"Yes"|"George"|"Christopher"||1
+"USA"|"UCSB"|"Yes"|"Golf"|"Frank"|1|1
+"USA"|"UCSB"|"Yes"|"Gouskos"|"Loukas"||
+"USA"|"UCSB"|"Yes"|"Gran"|"Jason"||1
+"USA"|"UCSB"|"Yes"|"Heller"|"Ryan"||
+"USA"|"UCSB"|"Yes"|"Incandela"|"Joe"||1
+"USA"|"UCSB"|"Yes"|"Justus"|"Christopher"||
+"USA"|"UCSB"|"Yes"|"Magaña Villalba"|"Ricardo"||
+"USA"|"UCSB"|"Yes"|"Mccoll"|"Nickolas"||
+"USA"|"UCSB"|"Yes"|"Mullin"|"Sam Daniel"||
+"USA"|"UCSB"|"Yes"|"Pavlunin"|"Viktor"||
+"USA"|"UCSB"|"Yes"|"Richman"|"Jeffrey"||
+"USA"|"UCSB"|"Yes"|"Rossin"|"Roberto"|1|1
+"USA"|"UCSB"|"Yes"|"Stuart"|"David"||
+"USA"|"UCSB"|"Yes"|"To"|"Wing"||
+"USA"|"UCSB"|"Yes"|"West"|"Christopher"||
+"USA"|"UCSB"|"Yes"|"Witherell"|"Michael"||
+"USA"|"UCSD"|"Yes"|"Branson"|"James G."||
+"USA"|"UCSD"|"Yes"|"Cerati"|"Giuseppe Benedetto"||
+"USA"|"UCSD"|"Yes"|"D'Agnolo"|"Raffaele Tito"||
+"USA"|"UCSD"|"Yes"|"Fedus"|"William"||
+"USA"|"UCSD"|"Yes"|"Georges"|"Alexander"||
+"USA"|"UCSD"|"Yes"|"Gilbert"|"Dylan"||
+"USA"|"UCSD"|"Yes"|"Holzner"|"André"||
+"USA"|"UCSD"|"Yes"|"Kelley"|"Ryan"||
+"USA"|"UCSD"|"Yes"|"Klein"|"Daniel"||1
+"USA"|"UCSD"|"Yes"|"Kovalskyi"|"Dmytro"||
+"USA"|"UCSD"|"Yes"|"Letts"|"James"||
+"USA"|"UCSD"|"Yes"|"Macneill"|"Ian"||
+"USA"|"UCSD"|"Yes"|"Olivito"|"Dominick"||1
+"USA"|"UCSD"|"Yes"|"Padhi"|"Sanjay"|1|1
+"USA"|"UCSD"|"Yes"|"Palmer"|"Christopher"||
+"USA"|"UCSD"|"Yes"|"Pieri"|"Marco"||
+"USA"|"UCSD"|"Yes"|"Sani"|"Matteo"||
+"USA"|"UCSD"|"Yes"|"Sharma"|"Vivek"||
+"USA"|"UCSD"|"Yes"|"Simon"|"Sean"||
+"USA"|"UCSD"|"Yes"|"Tadel"|"Matevz"||
+"USA"|"UCSD"|"Yes"|"Tanasijczuk"|"Andres"||
+"USA"|"UCSD"|"Yes"|"Tu"|"Yanjun"||1
+"USA"|"UCSD"|"Yes"|"Vartak"|"Adish"||
+"USA"|"UCSD"|"Yes"|"Wasserbaech"|"Steven"||
+"USA"|"UCSD"|"Yes"|"Welke"|"Charles"||1
+"USA"|"UCSD"|"Yes"|"Würthwein"|"Frank"||1
+"USA"|"UCSD"|"Yes"|"Yagil"|"Avraham"||1
+"USA"|"UCSD"|"Yes"|"Yoo"|"Jaehyeok"||
+"USA"|"UCSD"|"Yes"|"Zevi Della Porta"|"Giovanni"||1
+"USA"|"VANDERBILT"|"Yes"|"Appelt"|"Eric"||
+"USA"|"VANDERBILT"|"Yes"|"Delannoy"|"Andrés G."||1
+"USA"|"VANDERBILT"|"Yes"|"Gabella"|"William"||
+"USA"|"VANDERBILT"|"Yes"|"Greene"|"Senta"||
+"USA"|"VANDERBILT"|"Yes"|"Gurrola"|"Alfredo"||1
+"USA"|"VANDERBILT"|"Yes"|"Janjam"|"Ravi"||
+"USA"|"VANDERBILT"|"Yes"|"Johns"|"Willard"||
+"USA"|"VANDERBILT"|"Yes"|"Maguire"|"Charles"||
+"USA"|"VANDERBILT"|"Yes"|"Mao"|"Yaxian"||
+"USA"|"VANDERBILT"|"Yes"|"Melo"|"Andrew"||1
+"USA"|"VANDERBILT"|"Yes"|"Ni"|"Hong"||
+"USA"|"VANDERBILT"|"Yes"|"Rachlin"|"Bradley"||
+"USA"|"VANDERBILT"|"Yes"|"Sharma"|"Monika"||
+"USA"|"VANDERBILT"|"Yes"|"Sheldon"|"Paul"||1
+"USA"|"VANDERBILT"|"Yes"|"Snook"|"Benjamin"||
+"USA"|"VANDERBILT"|"Yes"|"Tuo"|"Shengquan"||
+"USA"|"VANDERBILT"|"Yes"|"Velkovska"|"Julia"||
+"USA"|"VANDERBILT"|"Yes"|"Xu"|"Qiao"||
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Arenton"|"Michael Wayne"||
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Boutle"|"Sarah"||1
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Cox"|"Bradley"||
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Feickert"|"Matthew"||
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Francis"|"Brian"||1
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Goodell"|"Joseph"||1
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Graber"|"Evan"||
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Hirosky"|"Robert"||1
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Katzenstein"|"Andrew"||
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Ledovskoy"|"Alexander"||
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Li"|"Hengne"||
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Lin"|"Chuanzhe"||
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Neu"|"Christopher"||1
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Wolfe"|"Evan"||
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Wood"|"John"||1
+"USA"|"VIRGINIA-UNIV"|"Yes"|"Xia"|"Fan"||
+"USA"|"WAYNE"|"Yes"|"Clarke"|"Christopher"||1
+"USA"|"WAYNE"|"No"|"Gollapinni"|"Sowjanya"||1
+"USA"|"WAYNE"|"Yes"|"Harr"|"Robert"||1
+"USA"|"WAYNE"|"Yes"|"Karchin"|"Paul Edmund"||1
+"USA"|"WAYNE"|"Yes"|"Kottachchi Kankanamge Don"|"Chamath"||1
+"USA"|"WAYNE"|"Yes"|"Lamichhane"|"Pramod"||1
+"USA"|"WAYNE"|"No"|"Mattson"|"Mark"||1
+"USA"|"WAYNE"|"No"|"Mcgee"|"Kellen"||1
+"USA"|"WAYNE"|"Yes"|"Milstène"|"Caroline"||1
+"USA"|"WAYNE"|"Yes"|"Siehl"|"Kevin"||1
+"USA"|"WAYNE"|"Yes"|"Sturdy"|"Jared"||1
+"USA"|"WISCONSIN"|"Yes"|"Belknap"|"Donald"||
+"USA"|"WISCONSIN"|"Yes"|"Borrello"|"Laura"||
+"USA"|"WISCONSIN"|"Yes"|"Carlsmith"|"Duncan"||
+"USA"|"WISCONSIN"|"Yes"|"Cepeda"|"Maria"||1
+"USA"|"WISCONSIN"|"Yes"|"Dasu"|"Sridhara"||
+"USA"|"WISCONSIN"|"Yes"|"Dodd"|"Laura"||
+"USA"|"WISCONSIN"|"Yes"|"Duric"|"Senka"||
+"USA"|"WISCONSIN"|"Yes"|"Friis"|"Evan"||
+"USA"|"WISCONSIN"|"Yes"|"Grothe"|"Monika"||
+"USA"|"WISCONSIN"|"Yes"|"Herndon"|"Matthew"||1
+"USA"|"WISCONSIN"|"Yes"|"Herndon"|"Matthew"||1
+"USA"|"WISCONSIN"|"Yes"|"Klabbers"|"Pamela"||
+"USA"|"WISCONSIN"|"Yes"|"Lanaro"|"Armando"||
+"USA"|"WISCONSIN"|"Yes"|"Lazaridis"|"Christos"||
+"USA"|"WISCONSIN"|"Yes"|"Levine"|"Aaron"||1
+"USA"|"WISCONSIN"|"Yes"|"Long"|"Kenneth"||
+"USA"|"WISCONSIN"|"Yes"|"Loveless"|"Richard"||
+"USA"|"WISCONSIN"|"Yes"|"Mohapatra"|"Ajit"||
+"USA"|"WISCONSIN"|"Yes"|"Ojalvo"|"Isabel"||
+"USA"|"WISCONSIN"|"Yes"|"Palmonari"|"Francesco"||
+"USA"|"WISCONSIN"|"Yes"|"Perry"|"Thomas"||
+"USA"|"WISCONSIN"|"Yes"|"Pierro"|"Giuseppe Antonio"||
+"USA"|"WISCONSIN"|"Yes"|"Polese"|"Giovanni"||
+"USA"|"WISCONSIN"|"Yes"|"Ross"|"Ian"||
+"USA"|"WISCONSIN"|"Yes"|"Ruggles"|"Tyler"||
+"USA"|"WISCONSIN"|"No"|"Sakharov"|"Alexandre"||1
+"USA"|"WISCONSIN"|"Yes"|"Sarangi"|"Tapas"||
+"USA"|"WISCONSIN"|"Yes"|"Savin"|"Alexander"||
+"USA"|"WISCONSIN"|"Yes"|"Smith"|"Nicholas"||
+"USA"|"WISCONSIN"|"Yes"|"Smith"|"Wesley H."||
+"USA"|"WISCONSIN"|"Yes"|"Taylor"|"Devin"||
+"USA"|"WISCONSIN"|"Yes"|"Vuosalo"|"Carl"||
+"USA"|"WISCONSIN"|"Yes"|"Woods"|"Nathaniel"||
