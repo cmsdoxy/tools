@@ -23,17 +23,17 @@ def isInLPC(institute):
     return False
 
 def load_usa_lpc_authors_csv():
-    f = open('data/LPCauthors-MN-March2014.csv', 'r')
+    f = open('data/LPCauthors-08April2014_fromLPCsurvey_mod.csv', 'r')
     lines = f.read().split("\n")
     for line in lines[1:]:
 #        print line
         columns = line.split("|")
-        if len(columns) > 14:
+        if len(columns) > 6:
             fname = columns[4].replace("\"", "").replace("'", "")
             name = columns[3].replace("\"", "").replace("'", "")
             
             isLPC = False
-            for i in range(13,15):  #lpc-fellows = 13, lpc-all = 14
+            for i in range(5,7):  #lpc-fellows = 5, lpc-all = 6
                 if columns[i]:
                     isLPC = True
                     break
