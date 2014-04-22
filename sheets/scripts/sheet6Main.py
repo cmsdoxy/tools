@@ -41,12 +41,6 @@ def TableParser(fn):
         data.append(row)
     return data
 
-def IsPublished(status):
-    # hardcoded paper statuses 
-    for i in ["PUB", "SUB", "ReSubmitted", "ACCEPT", "RefComments"]:
-        if i in status: return 1
-    return 0
-
 def IsGradStudent(status):
     if status in ['Doctoral Student', 'Non-Doctoral Student']: return 1
     return 0
@@ -68,36 +62,51 @@ for i in os.listdir(dir):
 # write authors as json file
 # WriteJSON('data/authors.json', authors)
 
-# load cadi entries
-sheet1     = LoadJSON("data/sheet1.json")
-
-# load AN pages
+# load ANs
 sheet2     = LoadJSON("data/sheet2.json")
 
 # collect authors from USA by institutes
-USAAuthors = {}
+USAANAuthors = {}
 for author in authors['USA']:
-    if USAAuthors.has_key(author['InstCode']):
-        USAAuthors[author['InstCode']].append(author)
+    if USAANAuthors.has_key(author['InstCode']):
+        USAANAuthors[author['InstCode']].append(author)
     else:
-        USAAuthors[author['InstCode']] = []
-        USAAuthors[author['InstCode']].append(author)
+        USAANAuthors[author['InstCode']] = []
+        USAANAuthors[author['InstCode']].append(author)
 
 # USA Institution statistics
 Institutes = {}
-for institute in USAAuthors:
+for institute in USAANAuthors:
     Institutes[institute] = {}
     numPhysicists         = 0
     numGradStudents       = 0
-    for author in USAAuthors[institute]:
+    numAN                 = 0
+    # authors list to calculate number of authors
+    authorsList           = []
+    for author in USAANAuthors[institute]:
         # count number of physicists
         if author['ActivName'] == 'Physicist': numPhysicists += 1
         # count number of grad students
         if IsGradStudent(author['ActivName']): numGradStudents += 1
+    for an in sheet2:
+        if sheet2[an]['institute'] == institute: numAN += 1
+        for author in sheet2[an]['authors']:
+            if sheet2[an]['authors'][author]['institute'] == institute and author not in authorsList:
+                authorsList.append(author)
     Institutes[institute]['Number of physicists'] = numPhysicists
     Institutes[institute]['Number of grad students'] = numGradStudents
+    Institutes[institute]['Number of AN'] = numAN
+    Institutes[institute]['Number of AN authors'] = len(authorsList)
 
-for i in sheet1:
-    status = sheet1[i]['status']
-    if IsPublished(status.split()[0]):
-        pass
+csv = ""
+#write institute statistics
+if Institutes:
+    sampleKey = Institutes.keys()[0]
+    headers   = Institutes[sampleKey].keys()
+    csv = "Institutes|" + "|".join(headers) + "\n"
+    for i in Institutes:
+        csv = csv + i
+        for j in headers:
+            csv = csv + "|%s" % (Institutes[i][j])
+        csv = csv + "\n"
+Write('sheets/sheet6.csv', csv)
