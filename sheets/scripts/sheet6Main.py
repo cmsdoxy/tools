@@ -93,10 +93,10 @@ for institute in USAANAuthors:
         for author in sheet2[an]['authors']:
             if sheet2[an]['authors'][author]['institute'] == institute and author not in authorsList:
                 authorsList.append(author)
-    Institutes[institute]['Number of physicists'] = numPhysicists
-    Institutes[institute]['Number of grad students'] = numGradStudents
-    Institutes[institute]['Number of AN'] = numAN
-    Institutes[institute]['Number of AN authors'] = len(authorsList)
+    Institutes[institute]['# of physicists'] = numPhysicists
+    Institutes[institute]['# of grad students'] = numGradStudents
+    Institutes[institute]['# of AN'] = numAN
+    Institutes[institute]['# of AN authors'] = len(authorsList)
 
 csv = ""
 #write institute statistics
