@@ -56,9 +56,8 @@ def IsPublished(status):
 
 def load_usa_lpc_authors_csv():
     usa_lpc_authors = {}
-    f = open('data/LPCauthors-08April2014_fromLPCsurvey_mod.csv', 'r')
-    lines = f.read().split("\n")
-    for line in lines[1:]:
+    LPC = Read('data/LPCauthors-08April2014_fromLPCsurvey_mod.csv').split('\n')
+    for line in LPC[1:]:
         columns = line.split("|")
         if len(columns) > 6:
             fname = columns[4].replace("\"", "").replace("'", "")
@@ -97,82 +96,73 @@ sheet1     = LoadJSON("data/sheet1.json")
 USALPC     = load_usa_lpc_authors_csv()
 
 # collect authors from USA by institutes
-USAANAuthors = {}
+USAAuthors = {}
 for author in authors['USA']:
-    if USAANAuthors.has_key(author['InstCode']):
-        USAANAuthors[author['InstCode']].append(author)
+    if USAAuthors.has_key(author['InstCode']):
+        USAAuthors[author['InstCode']].append(author)
     else:
-        USAANAuthors[author['InstCode']] = []
-        USAANAuthors[author['InstCode']].append(author)
+        USAAuthors[author['InstCode']] = []
+        USAAuthors[author['InstCode']].append(author)
 
 # USA Institution statistics
 Institutes = {}
-for institute in USAANAuthors:
+for institute in USAAuthors:
     Institutes[institute] = {}
     numPhysicists         = 0
     numGradStudents       = 0
-    numAN                 = 0
     # authors list to calculate number of authors
     authorsList           = []
-    for author in USAANAuthors[institute]:
+    for author in USAAuthors[institute]:
         # count number of physicists
         if author['ActivName'] == 'Physicist': numPhysicists += 1
         # count number of grad students
         if IsGradStudent(author['ActivName']): numGradStudents += 1
-    for an in sheet2:
-        if sheet2[an]['institute'] == institute: numAN += 1
-        for author in sheet2[an]['authors']:
-            if sheet2[an]['authors'][author]['institute'] == institute and author not in authorsList:
-                authorsList.append(author)
     Institutes[institute]['# of physicists'] = numPhysicists
     Institutes[institute]['# of grad students'] = numGradStudents
-    Institutes[institute]['# of AN'] = numAN
-    Institutes[institute]['# of AN authors'] = len(authorsList)
 
-CADIUSAbyInstitute = {}
-for i in sheet1:
-    entry = sheet1[i]
+# CADI SECTION
+# CADI authors from CADI page
+CADIAuthors = {}
+for i in Institutes.keys():
+    Institutes[i]['# of CADI papers'] = 0
+    CADIAuthors[i] = []
+for paper in sheet1:
+    cadiLine   = sheet1[paper]
+    # skip the paper if it is not published
+    if not IsPublished(cadiLine['status']): continue
+    ANs        = cadiLine['notes']
+    institutes = []
+    # precess all ANs for the paper
+    for AN in ANs:
+        for author in sheet2[AN]['authors']:
+            author_ = sheet2[AN]['authors'][author]
+            # skip the author if he/she is not from USA
+            if author_['country'] != 'USA': continue
+            # do not add the same institute more than one time
+            if not author_['institute'] in institutes: institutes.append(author_['institute'])
+            # do not add the same author the CADI author pool of the institute
+            if not author in CADIAuthors[author_['institute']]: CADIAuthors[author_['institute']].append(author)
+    for i in institutes:
+        Institutes[i]['# of CADI papers'] += 1
 
-    # only published papers
-    if not IsPublished(entry['status']): continue
+for i in Institutes.keys():
+    Institutes[i]['# of CADI authors'] = len(CADIAuthors[i])
+    Institutes[i]['# of CADI authors from LPC'] = 0
+    for j in CADIAuthors[i]:
+        if not (USALPC.has_key(j) and USALPC[j]): continue
+        Institutes[i]['# of CADI authors from LPC'] += 1
 
-    chairperson = {}
-    if entry['chairperson']: chairperson[entry['chairperson']['fullname']]   = {'country' : entry['chairperson']['country'],  'institute' : entry['chairperson']['institute']}
-
-    cadiContact = {}
-    if entry['cadi_contact']: cadiContact[entry['cadi_contact']['fullname']] = {'country' : entry['cadi_contact']['country'], 'institute' : entry['cadi_contact']['institute']}
-
-    ARCMembers  = entry['arc_members']
-
-    authors = {}
-    authors.update(chairperson)
-    authors.update(cadiContact)
-    authors.update(ARCMembers)
-
-    for fname in authors:
-        info = authors[fname]
-        if not CADIUSAbyInstitute.has_key(info['institute']): CADIUSAbyInstitute[info['institute']] = {}
-        CADIUSAbyInstitute[info['institute']][fname] = info
-
-for institute in Institutes:
-    if not CADIUSAbyInstitute.has_key(institute):
-        Institutes[institute]['# of CADI authors'] = 0
-        Institutes[institute]['# of CADI authors from USA'] = 0
-        Institutes[institute]['# of CADI authors from LPC'] = 0
-        continue
-
-    Institutes[institute]['# of CADI authors'] = len(CADIUSAbyInstitute[institute])
-
-    numCADIUSA = 0
-    for i in CADIUSAbyInstitute[institute]:
-        if CADIUSAbyInstitute[institute][i]['country'] == 'USA':
-            numCADIUSA = numCADIUSA + 1
-    Institutes[institute]['# of CADI authors from USA'] = numCADIUSA
-
-    numCADILPC = 0
-    for i in authors:
-        if USALPC.has_key(i) and USALPC[i]: numCADILPC = numCADILPC + 1
-    Institutes[institute]['# of CADI authors from LPC'] = numCADILPC
+# AN SECTION
+for i in Institutes.keys():
+    Institutes[i]['# of AN'] = 0
+for AN in sheet2:
+    institutes = []
+    for author in sheet2[AN]['authors']:
+        author_ = sheet2[AN]['authors'][author]
+        if not author_['institute'] in institutes: institutes.append(author_['institute'])
+    for i in institutes:
+        if not i in Institutes.keys(): continue
+        Institutes[i]['# of AN'] += 1
 
 csv = ""
 #write institute statistics
