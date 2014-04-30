@@ -106,19 +106,23 @@ for author in authors['USA']:
 
 # USA Institution statistics
 Institutes = {}
+GradStudents = {}
 for institute in USAAuthors:
     Institutes[institute] = {}
     numPhysicists         = 0
     numGradStudents       = 0
     # authors list to calculate number of authors
     authorsList           = []
+    GradStudents[institute] = []
     for author in USAAuthors[institute]:
         # count number of physicists
         if author['ActivName'] == 'Physicist': numPhysicists += 1
         # count number of grad students
-        if IsGradStudent(author['ActivName']): numGradStudents += 1
+        if IsGradStudent(author['ActivName']):
+            fname = "%s %s" % (author['NamfCMS'], author['NameCMS'])
+            if not fname in GradStudents[institute]: GradStudents[institute].append(fname)
     Institutes[institute]['# of physicists'] = numPhysicists
-    Institutes[institute]['# of grad students'] = numGradStudents
+    Institutes[institute]['# of grad students'] = len(GradStudents[institute])
 
 # CADI SECTION
 # CADI authors from CADI page
