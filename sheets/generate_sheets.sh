@@ -19,6 +19,3 @@ python scripts/sheet5Main.py
 
 echo "Generating Sheet6"
 python scripts/sheet6Main.py
-
-echo "Generating Sheet7"
-python scripts/sheet7Main.py
