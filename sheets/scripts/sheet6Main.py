@@ -41,9 +41,18 @@ def TableParser(fn):
         data.append(row)
     return data
 
-def IsGradStudent(status):
-    if status in ['Doctoral Student', 'Non-Doctoral Student']: return 1
-    return 0
+def IsPhysicist(member):
+    if member['ActivName'] == 'Physicist' and  member['Author'] == '1': return True
+    return False
+
+def IsGradStudent(member):
+    if member['ActivName'] in ['Doctoral Student'] and member['StatusCMS'] == 'CMS': return True
+    return False
+
+def FindMember(memberName):
+    for i in data:
+        if '%(NameCMS)s %(NamfCMS)s' % i == memberName: return i
+    return {}
 
 def IsPublished(status):
     # hardcoded paper statuses
@@ -54,8 +63,22 @@ def IsPublished(status):
         if i in status: return 1
     return 0
 
-def load_usa_lpc_authors_csv():
-    usa_lpc_authors = {}
+def CheckDate(entry, format):
+    if format == 'AN':
+        entry = entry[len('CMS AN-'):entry.find('/')]
+        entry = int(entry)
+    elif format == 'CADI':
+        if len(entry) == 0: return True
+        entry = int(entry[0:4])
+    elif format == 'CEntry':
+        if entry == '' or entry == 'NONE': return False
+        entry = int(entry)
+    if not type(entry) == int: return False
+    if entry >= 2012: return True
+    return False
+
+def load_usa_lpc_members_csv():
+    usa_lpc_members = {}
     LPC = Read('data/LPCauthors-08April2014_fromLPCsurvey_mod.csv').split('\n')
     for line in LPC[1:]:
         columns = line.split("|")
@@ -67,87 +90,91 @@ def load_usa_lpc_authors_csv():
                 if columns[i]:
                     isLPC = True
                     break
-            usa_lpc_authors[fname + " " + name] = isLPC
-            usa_lpc_authors[name + " " + fname] = isLPC
-    return usa_lpc_authors
+            usa_lpc_members[fname + " " + name] = isLPC
+            usa_lpc_members[name + " " + fname] = isLPC
+    return usa_lpc_members
 
-# collect members with their information
-dir = 'data/authors/'
-authors = {}
-for i in os.listdir(dir):
-    if not '.html' in i: continue
-    data = TableParser(dir + i)
-    # remove .html filename extension and then replace USA2 -> USA
-    country = i.replace('.html', '').replace('2', '')
-    # merge tables if country already exists (for USA and USA2 lists)
-    if authors.has_key(country):
-        for i in data:
-            authors[country].append(i)
-    else:
-        authors[country] =  data
-# write authors as json file
-# WriteJSON('data/authors.json', authors)
+data = TableParser('data/authors/USA2.html')
+# write members as json file
+# WriteJSON('data/members.json', members)
 
 # load ANs
 sheet2     = LoadJSON("data/sheet2.json")
 
 # load CADI papers
 sheet1     = LoadJSON("data/sheet1.json")
-USALPC     = load_usa_lpc_authors_csv()
+USALPC     = load_usa_lpc_members_csv()
 
-# collect authors from USA by institutes
-USAAuthors = {}
-for author in authors['USA']:
-    if USAAuthors.has_key(author['InstCode']):
-        USAAuthors[author['InstCode']].append(author)
+# collect members from USA by institutes
+Members = {}
+for member in data:
+    if Members.has_key(member['InstCode']):
+        Members[member['InstCode']].append(member)
     else:
-        USAAuthors[author['InstCode']] = []
-        USAAuthors[author['InstCode']].append(author)
+        Members[member['InstCode']] = []
+        Members[member['InstCode']].append(member)
 
 # USA Institution statistics
 Institutes = {}
 GradStudents = {}
-for institute in USAAuthors:
+Physicist    = {}
+for institute in Members:
     Institutes[institute] = {}
     numPhysicists         = 0
     numGradStudents       = 0
-    # authors list to calculate number of authors
-    authorsList           = []
+    # members list to calculate number of members
+    membersList           = []
     GradStudents[institute] = []
-    for author in USAAuthors[institute]:
-        # count number of physicists
-        if author['ActivName'] == 'Physicist': numPhysicists += 1
-        # count number of grad students
-        if IsGradStudent(author['ActivName']):
-            fname = "%s %s" % (author['NamfCMS'], author['NameCMS'])
-            if not fname in GradStudents[institute]: GradStudents[institute].append(fname)
-    Institutes[institute]['# of physicists'] = numPhysicists
+    Physicist[institute]    = []
+    for member in Members[institute]:
+        fname = "%s %s" % (member['NamfCMS'], member['NameCMS'])
+        if IsPhysicist(member) and not fname in Physicist[institute]: Physicist[institute].append(fname)
+        if IsGradStudent(member) and not fname in GradStudents[institute]: GradStudents[institute].append(fname)
+    Institutes[institute]['# of physicists'] = len(Physicist[institute])
     Institutes[institute]['# of grad students'] = len(GradStudents[institute])
 
 # CADI SECTION
-# CADI authors from CADI page
+# CADI members from CADI page
 CADIAuthors = {}
+CADIEntries = {}
 for i in Institutes.keys():
     Institutes[i]['# of CADI papers'] = 0
-    CADIAuthors[i] = []
+    Institutes[i]['# of CADI papers [2012 - )'] = 0
+    CADIAuthors[i] = {}
+    CADIEntries[i] = []
 for paper in sheet1:
     cadiLine   = sheet1[paper]
     # skip the paper if it is not published
     if not IsPublished(cadiLine['status']): continue
     ANs        = cadiLine['notes']
-    institutes = []
     # precess all ANs for the paper
     for AN in ANs:
-        for author in sheet2[AN]['authors']:
-            author_ = sheet2[AN]['authors'][author]
-            # skip the author if he/she is not from USA
-            if author_['country'] != 'USA': continue
-            # do not add the same institute more than one time
-            if not author_['institute'] in institutes: institutes.append(author_['institute'])
-            # do not add the same author the CADI author pool of the institute
-            if not author in CADIAuthors[author_['institute']]: CADIAuthors[author_['institute']].append(author)
-    for i in institutes:
-        Institutes[i]['# of CADI papers'] += 1
+        for member in sheet2[AN]['authors']:
+            member_ = sheet2[AN]['authors'][member]
+            # skip the member if he/she is not from USA
+            if member_['country'] != 'USA': continue
+            # do not add the same member into the CADI member pool of the institute
+            if not member in CADIAuthors[member_['institute']]:
+                dict_ = FindMember(member)
+                dict_['Paper'] = [paper]
+                CADIAuthors[member_['institute']][member] = dict_
+            else:
+                CADIAuthors[member_['institute']][member]['Paper'].append(paper)
+            if not paper in CADIEntries[member_['institute']]: CADIEntries[member_['institute']].append(paper)
+
+for inst in CADIEntries:
+    Institutes[inst]['# of CADI papers'] =  len(CADIEntries[inst])
+    for paper in CADIEntries[inst]:
+        if CheckDate(sheet1[paper]['date'], 'CEntry'):
+            Institutes[inst]['# of CADI papers [2012 - )'] += 1
+
+for inst in CADIAuthors:
+    Institutes[inst]['# of CADI Authors [2012 - )'] = 0
+    for author in CADIAuthors[inst]:
+        author_ = CADIAuthors[inst][author]
+        if not 'EXYear' in author_.keys():
+            continue
+        if CheckDate(author_['EXYear'], 'CADI'): Institutes[inst]['# of CADI Authors [2012 - )'] += 1
 
 for i in Institutes.keys():
     Institutes[i]['# of CADI authors'] = len(CADIAuthors[i])
@@ -158,15 +185,18 @@ for i in Institutes.keys():
 
 # AN SECTION
 for i in Institutes.keys():
-    Institutes[i]['# of AN'] = 0
+    Institutes[i]['# of ANs'] = 0
+    Institutes[i]['# of ANs [2012 - )'] = 0
 for AN in sheet2:
-    institutes = []
-    for author in sheet2[AN]['authors']:
-        author_ = sheet2[AN]['authors'][author]
-        if not author_['institute'] in institutes: institutes.append(author_['institute'])
+    institutes = {}
+    for member in sheet2[AN]['authors']:
+        member_ = sheet2[AN]['authors'][member]
+        if not member_['institute'] in institutes.keys(): institutes[member_['institute']] = AN
     for i in institutes:
         if not i in Institutes.keys(): continue
-        Institutes[i]['# of AN'] += 1
+        Institutes[i]['# of ANs'] += 1
+        if CheckDate(institutes[i], 'AN'):
+            Institutes[i]['# of ANs [2012 - )'] += 1
 
 csv = ""
 #write institute statistics
