@@ -1,7 +1,7 @@
 Instructions how to generate CADI sheets:
 
 ```
-> git clone git@github.com:cmsdoxy/tools.git
+> git clone https://github.com/cmsdoxy/tools.git
 
 > cd tools/sheets
 ```
